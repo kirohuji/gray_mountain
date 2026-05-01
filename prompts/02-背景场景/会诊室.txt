@@ -1,0 +1,50 @@
+================================================================================
+              会诊室 — 韦斯特医生诊所 (V4.5)
+================================================================================
+
+【场景说明】
+韦斯特医生的会诊室，专业但阴冷。医生在此宣告艾琳娜确诊肺结核。
+报纸上刊登着韦斯特医生在结核病治疗领域的卓越成就。
+
+================================================================================
+【Base Prompt】
+================================================================================
+
+background dataset,
+masterpiece, best quality,
+monochrome, greyscale, black and white, high contrast,
+year 1930, 
+graphic novel style, ink wash,
+gothic, weathered, distressed, aged,
+film grain, daguerreotype,
+dramatic shadows, chiaroscuro, low-key lighting,
+pencil sketch, crosshatching, gritty texture,
+thin white ornamental borders,
+scenery, doctor's office, consultation room, 1930s medical office,
+wooden desk, medical papers scattered, tuberculosis documents,
+diploma on wall, framed medical certificates, achievements,
+newspaper article on desk about tuberculosis treatment,
+stethoscope on desk, medicine bottles, medical cabinet,
+bookshelf, leather-bound medical volumes,
+window, pale daylight through half-closed blinds,
+clinical, cold, sterile atmosphere,
+wide shot, room interior, no humans. 
+A 1930s doctor's consultation room — the wooden desk covered 
+with medical papers and a newspaper article touting the doctor's 
+tuberculosis treatment achievements. Pale daylight seeps through 
+half-closed blinds, creating a clinical coldness. This is a room 
+where verdicts are delivered, not where healing happens. Rendered 
+in weathered daguerreotype textures with film grain, dramatic 
+chiaroscuro, and thin gothic ornamental borders matching the 
+horror visual novel UI aesthetic.
+
+================================================================================
+【Undesired Content】
+================================================================================
+
+worst quality, low quality, normal quality, lowres, jpeg artifacts,
+signature, watermark, text, humans, people, characters,
+color, vibrant, saturated, bright, colorful,
+realistic, photorealistic, 3d,
+smooth, clean, pristine, new, glossy,
+digital art, vector art, flat color,

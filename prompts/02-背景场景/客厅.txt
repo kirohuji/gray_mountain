@@ -1,0 +1,74 @@
+================================================================================
+              客厅 — 波士顿褐石别墅 (V4.5)
+================================================================================
+
+【场景说明】
+比肯山褐石联排别墅的客厅。两个版本：
+日间（1929年吉姆来访推荐疗养院）和深夜（汤姆独坐沙发望着窗外）
+
+================================================================================
+【日间客厅 — Base Prompt】
+================================================================================
+
+background dataset,
+masterpiece, best quality,
+monochrome, greyscale, black and white, high contrast,
+year 1930, 
+graphic novel style, ink wash,
+gothic, weathered, distressed, aged,
+film grain, daguerreotype,
+pencil sketch, crosshatching,
+thin white ornamental borders,
+scenery, living room, 1930s Boston brownstone interior,
+old house, worn dignified furniture, fireplace, mantelpiece,
+sofa, armchair, wooden coffee table,
+business card on table, newspaper,
+curtains, window, pale daylight filtering through,
+dusty air, slightly cluttered but orderly,
+wide shot, room interior, no humans. 
+A modest but dignified 1930s living room in a Boston brownstone. 
+Pale daylight filters through curtains onto worn furniture. A 
+business card and newspaper lie on the coffee table — evidence 
+of the difficult conversation that took place here. Weathered 
+daguerreotype textures with thin gothic borders matching the 
+horror visual novel UI aesthetic.
+
+================================================================================
+【深夜客厅 — Base Prompt】
+================================================================================
+
+background dataset,
+masterpiece, best quality,
+monochrome, greyscale, black and white, high contrast,
+year 1930, 
+graphic novel style, ink wash,
+horror \(theme\), eerie, unsettling,
+gothic, weathered, distressed, aged,
+film grain, vignette, daguerreotype,
+dramatic shadows, chiaroscuro, low-key lighting,
+pencil sketch, crosshatching, gritty texture,
+thin white ornamental borders,
+scenery, living room, 1930s Boston brownstone,
+dark room, dimly lit, empty sofa,
+window, night outside, 2.0::thick boston darkness::,
+pale moonlight casting long distorted shadows,
+lonely atmosphere, melancholic, oppressive silence,
+wide shot, room interior, no humans. 
+The same living room transformed by night. Pale moonlight cuts 
+through the window, casting long distorted shadows. The empty 
+sofa and silent room hum with loneliness. The darkness outside 
+the window is thick — almost solid — like the Boston night 
+described as "viscous, dense, like a solid." Rendered in 
+weathered daguerreotype textures with film grain, dramatic 
+chiaroscuro, and thin gothic ornamental borders.
+
+================================================================================
+【Undesired Content】
+================================================================================
+
+worst quality, low quality, normal quality, lowres, jpeg artifacts,
+signature, watermark, text, humans, people, characters,
+color, vibrant, saturated, bright, colorful,
+realistic, photorealistic, 3d,
+smooth, clean, pristine, new, glossy,
+digital art, vector art, flat color,

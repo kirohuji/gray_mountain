@@ -1,0 +1,35 @@
+================================================================================
+                  雪花效果 — 飘雪叠加层 (V4.5)
+================================================================================
+
+【用途】梦境雪景场景叠加雪花粒子
+
+================================================================================
+【Base Prompt】
+================================================================================
+
+background dataset,
+masterpiece, best quality,
+monochrome, greyscale, black and white,
+simple design, abstract, overlay texture,
+snow, snowflakes, falling snow particles,
+white particles on black background,
+scattered, random distribution,
+winter, cold, blizzard feeling,
+bokeh, out of focus snow, blurry large particles,
+transparent, alpha channel ready,
+no humans, no characters. 
+A falling snow overlay texture — white snowflake particles 
+scattered across a transparent dark background. Some flakes 
+are out of focus and bokeh-style for depth. Designed to 
+layer over visual novel scenes for winter atmosphere.
+
+================================================================================
+【Undesired Content】
+================================================================================
+
+worst quality, low quality, normal quality, lowres, jpeg artifacts,
+signature, watermark, text, humans, characters, people,
+hard edges, sharp lines, opaque, solid,
+color, vibrant, saturated, bright, colorful,
+realistic, photorealistic, 3d,

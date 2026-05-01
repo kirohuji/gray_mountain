@@ -1,0 +1,49 @@
+================================================================================
+              厨房 — 深夜烧水 (V4.5)
+================================================================================
+
+【场景说明】
+老房子厨房，水龙头的水不干净（波士顿水质差），过滤器两周就发黄发黑。
+汤姆放弃过滤器改用烧水壶——"沸腾能杀死一切东西，对吧？"
+
+================================================================================
+【Base Prompt】
+================================================================================
+
+background dataset,
+masterpiece, best quality,
+monochrome, greyscale, black and white, high contrast,
+year 1930, 
+graphic novel style, ink wash,
+gothic, weathered, distressed,
+film grain, daguerreotype, dust motes,
+dramatic shadows, chiaroscuro, low-key lighting,
+pencil sketch, crosshatching, gritty texture,
+thin white ornamental borders,
+scenery, kitchen, 1930s vintage kitchen,
+old house, worn cabinets, cracked tiles,
+sink, faucet, dripping murky water,
+kettle on stove, steam rising, boiling,
+dirty water filter, yellowed, stained, black residue,
+dim light, single bare bulb, harsh shadows,
+window above sink, darkness outside,
+night atmosphere, quiet, cold,
+wide shot, room interior, no humans. 
+A cramped 1930s kitchen at night, lit by a single bare bulb. 
+Steam rises from a kettle while murky water drips from the 
+faucet. The yellowed water filter sits stained on the counter — 
+a detail that speaks of poverty and the city's failing 
+infrastructure. Rendered in weathered daguerreotype textures 
+with film grain, dramatic chiaroscuro, and thin gothic borders 
+matching the horror visual novel UI.
+
+================================================================================
+【Undesired Content】
+================================================================================
+
+worst quality, low quality, normal quality, lowres, jpeg artifacts,
+signature, watermark, text, humans, people, characters,
+color, vibrant, saturated, bright, colorful,
+realistic, photorealistic, 3d,
+smooth, clean, pristine, new, glossy,
+digital art, vector art, flat color,

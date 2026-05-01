@@ -1,0 +1,52 @@
+---
+description: Ren'Py 定义文件规范 — 角色、图像、音频的集中定义
+globs: **/definitions.rpy
+alwaysApply: false
+---
+
+# Ren'Py 定义文件规范
+
+## 角色定义
+
+- 所有角色在 `definitions.rpy` 中 **集中定义**。
+- 使用 `Character()` 并指定 `color`、`voice_tag` 等属性。
+- NVL 模式角色用 `kind=nvl` 定义。
+
+```renpy
+define e = Character("Eileen", color="#c8ffc8", what_prefix='"', what_suffix='"')
+define n = Character("Narrator", kind=narrator)
+define e_nvl = Character("Eileen", kind=nvl)  # NVL 模式
+```
+
+## 图像定义
+
+- 背景和立绘也在 `definitions.rpy` 中集中定义。
+- 立绘优先使用 `layeredimage` 实现多层合成（表情、服装属性组合）。
+- 背景用 `image bg xxx = "images/bg/xxx.webp"` 格式。
+
+```renpy
+image bg town day = "images/bg/town_day.webp"
+
+layeredimage eileen:
+    always: "images/sprites/eileen/body.png"
+    group expression:
+        attribute normal default: "images/sprites/eileen/face_normal.png"
+        attribute happy: "images/sprites/eileen/face_happy.png"
+```
+
+## 音频定义
+
+- 音频资源用 `define audio.*` 声明命名空间路径。
+- BGM 推荐 OGG 格式，音效短促可用 WAV。
+
+```renpy
+define audio.bgm_town = "audio/bgm/town_theme.ogg"
+define audio.sfx_door = "audio/sfx/door_open.ogg"
+```
+
+## 图像格式
+
+- 背景图 → WebP/JPEG
+- 带透明立绘 → WebP（推荐）或 PNG
+- UI 小图标 → PNG
+- 动画帧 → PNG 序列或 WebM

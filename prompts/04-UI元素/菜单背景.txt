@@ -1,0 +1,62 @@
+================================================================================
+                菜单背景 — 主菜单 / 游戏菜单 (V4.5)
+================================================================================
+
+【用途】Ren'Py 主菜单标题画面 / 游戏菜单背景
+
+================================================================================
+【主菜单背景 — Base Prompt】
+================================================================================
+
+background dataset,
+masterpiece, best quality, very aesthetic,
+monochrome, greyscale, black and white, high contrast,
+year 1920, 
+graphic novel style, ink wash,
+horror \(theme\), eerie, ominous, unsettling atmosphere,
+gothic, old photograph, film grain, fog,
+dark atmosphere, dramatic shadows, chiaroscuro, low-key lighting,
+pencil sketch, crosshatching, gritty texture,
+scenery, atmospheric background,
+grey mountain silhouette, 2.0::thick fog::, mist,
+barren landscape, desolate, empty,
+dark overcast sky, gloomy, oppressive,
+subtle composition, 1.5::negative space:: for title overlay,
+no humans, no characters,
+wide panoramic shot. 
+An atmospheric title screen background for a gothic horror visual 
+novel. The silhouette of a grey mountain emerges from thick fog 
+against an oppressive overcast sky. The composition is deliberately 
+sparse with ample negative space for the game title overlay. 
+Black and white graphic novel style with film grain and vignette.
+
+================================================================================
+【游戏菜单背景 — Base Prompt】
+================================================================================
+
+background dataset,
+masterpiece, best quality,
+monochrome, greyscale, black and white,
+year 1920,
+simple design, abstract, dark textured background,
+dark gradient, fade to black,
+grunge texture, noise, film grain,
+scratched surface, weathered stone,
+dark grey, charcoal grey, deep black,
+minimalist, elegant,
+no humans, no characters, no text,
+simple background. 
+A dark textured background for a game menu screen. Subtle grunge 
+and film grain over a deep charcoal-to-black gradient. Elegant, 
+minimalist, and unobtrusive — designed to sit behind menu text 
+without distracting from it. Monochrome black and white.
+
+================================================================================
+【Undesired Content】
+================================================================================
+
+worst quality, low quality, normal quality, lowres, jpeg artifacts,
+signature, watermark, text, writing, letters, words,
+humans, characters, people, faces,
+color, vibrant, saturated, bright, colorful,
+realistic, photorealistic, 3d,

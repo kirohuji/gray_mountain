@@ -1,0 +1,57 @@
+---
+description: Ren'Py 核心编码规范 — 命名、缩进、Label 管理、变量声明、旗标管理
+alwaysApply: true
+---
+
+# Ren'Py 核心编码规范
+
+## 缩进与格式
+
+- 使用 **4 个空格** 缩进，禁止制表符。
+- 超过 1000 行的 `.rpy` 文件应拆分为多个文件。
+
+## Label 命名
+
+- 使用 **下划线命名**，语义清晰：`chapter01_start`、`bad_ending_route_a`
+- 禁止含糊名称：`start2`、`aaa`
+- 主入口 `label start:` 保持简洁，仅做跳转。
+- 每个章节有明确的起始和结束 label，形成跳转链。
+
+## 变量声明
+
+- 存档变量用 `default` 声明，不要用 `$` 在 label 中初始化。
+- 跨存档数据用 `persistent` 前缀。
+- 旧存档兼容：新增变量一律用 `default`，不要用 `define`。
+
+```renpy
+# ✅ 正确
+default affection = 0
+default flags = {}
+
+# ❌ 错误：旧存档会跳过
+label start:
+    $ new_flag = False
+```
+
+## 旗标管理
+
+- 使用 **字典统一管理** 旗标，避免散乱的顶层变量。
+- 复杂状态用 **Python 类封装**（如 CharacterStats）。
+
+```renpy
+# ✅ 推荐
+default flags = {}
+$ flags["met_eileen"] = True
+if flags.get("met_eileen", False):
+    ...
+
+# ❌ 避免
+default met_eileen = False
+default opened_door = False
+# 几十个散乱变量难以维护
+```
+
+## Python 代码
+
+- 简单赋值用 `$` 单行，复杂逻辑用 `python:` 块。
+- 避免在 `init python:` 中做耗时操作，延迟到 `label start:` 按需加载。

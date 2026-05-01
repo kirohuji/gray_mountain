@@ -1,0 +1,73 @@
+================================================================================
+            教堂相遇 — 汤姆遇见神父 CG (V4.5 + ess UI Theme)
+================================================================================
+
+【剧情】汤姆推开教堂门，诡异的圣母壁画下，
+迈克尔神父从阴影中现身，递来一盏提灯。
+"很多人上山。但只有一部分人下山了，很少的一部分。"
+
+================================================================================
+【Base Prompt】
+================================================================================
+
+masterpiece, best quality,
+monochrome, greyscale, black and white, high contrast,
+year 1930, 
+graphic novel style, ink wash,
+horror \(theme\), eerie, ominous, unsettling atmosphere, dread,
+gothic, decay, weathered, distressed,
+film grain, daguerreotype,
+dramatic shadows, chiaroscuro, low-key lighting,
+pencil sketch, etching, crosshatching, gritty texture,
+thin white ornamental borders,
+2boys, young painter and ancient irish priest,
+younger man, painter, startled expression, stepping back,
+winter coat, dark hair, tired haunted eyes,
+elderly priest, irish, white cassock, hood,
+1.5::gaunt::, 1.5::skeletal::, sunken eyes, high cheekbones,
+holding lantern forward, offering light,
+lantern as only light source, dramatic upward shadows on face,
+dark gothic church interior, ancient stone walls,
+grotesque madonna and child mural looming behind,
+2.0::melting face::, 1.5::faceless::, 1.3::smiling outline remains::,
+uncanny, blasphemous, sacred but violated,
+candlelight, lantern light, shadows dancing,
+cinematic composition, medium shot,
+light dividing scene — priest in shadow, light falling on painter. 
+A cinematic horror illustration of a fateful meeting inside an 
+ancient mountain church. An skeletal Irish priest emerges from 
+deep shadow, lantern held forward — the only light source. The 
+young painter recoils, startled. Behind them looms a grotesque 
+mural of the Madonna and Child, her face melted into obscurity 
+but her smiling outline still visible. The lantern carves dramatic 
+shadows across both figures. Rendered in weathered daguerreotype 
+textures with film grain and thin gothic ornamental borders — 
+matching the black and white horror visual novel UI aesthetic.
+
+================================================================================
+【Character Prompt 1 — 汤姆】
+================================================================================
+
+male, young man, tall, slim, painter, winter coat,
+startled expression, dark hair, tired eyes, 
+thin white ornamental border,
+
+【Character Prompt 2 — 迈克尔神父】
+================================================================================
+
+male, elderly, ancient, irish, gaunt, skeletal, 
+white cassock, hood, sunken eyes, high cheekbones, 
+weathered skin, holding lantern, stoic haunted expression,
+thin white ornamental border,
+
+================================================================================
+【Undesired Content】
+================================================================================
+
+worst quality, low quality, normal quality, lowres,
+bad anatomy, bad hands, missing fingers, poorly drawn face,
+bad proportions, cropped, jpeg artifacts,
+signature, watermark, text, color, vibrant, saturated,
+bright, colorful, realistic, photorealistic, 3d, chibi,
+smooth, clean, pristine, new, glossy,
+digital art, vector art, flat color,

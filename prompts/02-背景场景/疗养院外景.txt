@@ -1,0 +1,126 @@
+================================================================================
+            疗养院系列 — 灰山疗养院 (V4.5)
+================================================================================
+
+【建筑详情】
+- 1915年由马萨诸塞州公共卫生部资助建立，伊莱沙·莫恩创建
+- 位置：灰山山腰南侧，海拔900米
+- 规模：三栋主楼，约120张床位（病房楼+行政/宿舍+厨房/餐厅/活动室）
+- 材质：当地开采石灰岩，与山体同源——墙体厚实，外墙刷白
+- 病房楼：每层开放式大病房+少量私人病房，南侧/西侧宽大阳台
+- 窗户巨大，从天花板延伸到腰部，保证最大通风
+- 地板略有倾斜，便于阳台雨雪排水
+- 建筑与山体之间已看不出缝隙，像长在了一起
+
+================================================================================
+【疗养院外景 — Base Prompt】
+================================================================================
+
+background dataset,
+masterpiece, best quality,
+monochrome, greyscale, black and white, high contrast,
+year 1930, 
+graphic novel style, ink wash,
+horror \(theme\), eerie, ominous, unsettling atmosphere,
+gothic, weathered, distressed, aged,
+film grain, daguerreotype, fog,
+dramatic shadows, chiaroscuro, low-key lighting,
+pencil sketch, crosshatching, gritty texture,
+thin white ornamental borders,
+scenery, sanatorium, hospital complex,
+built into mountainside at 900 meters altitude,
+limestone walls, 1.3::same grey stone as mountain::,
+white painted exterior, 1.5::seamless with rock::,
+organic architecture, 1.3::building grown from mountain::,
+large arched windows, elegant but cold,
+south-facing wide balconies, deck chairs visible,
+fog, mist around building, mountain backdrop,
+bare ornamental trees, winter,
+quiet, serene but deeply eerie,
+wide shot, exterior, no humans. 
+A sanatorium built directly into the grey mountainside at 900 
+meters — its limestone walls the same stone as the mountain 
+itself, painted white. The building seems to have grown from 
+the rock, seamless and organic. Large arched windows and wide 
+south-facing balconies speak to the "fresh air therapy" practiced 
+within. The atmosphere is peaceful yet profoundly wrong. Rendered 
+in weathered daguerreotype textures with film grain and thin 
+gothic ornamental borders.
+
+================================================================================
+【疗养院病房 — Base Prompt】
+================================================================================
+
+background dataset,
+masterpiece, best quality,
+monochrome, greyscale, black and white, high contrast,
+year 1930, 
+graphic novel style, ink wash,
+gothic, weathered, distressed, aged,
+film grain, daguerreotype,
+dramatic shadows, chiaroscuro, low-key lighting,
+pencil sketch, crosshatching, gritty texture,
+thin white ornamental borders,
+scenery, hospital room, sanatorium patient room,
+1.5::enormous window::, floor to ceiling, arched like church window,
+stained glass sections, from ceiling to waist height,
+sunlight streaming through, god rays, warm light beams,
+dust motes dancing in sunlight,
+iron hospital bed, white sheets, clean,
+nightstand, small vase of flowers, medicine,
+white walls, clean, minimal,
+quiet, peaceful, 1.3::fragile hope::,
+wide shot, room interior, no humans. 
+A sanatorium patient room dominated by an enormous window 
+stretching from ceiling nearly to the floor — designed for 
+maximum ventilation in the "fresh air cure." Warm sunlight 
+streams through, creating god rays that illuminate dancing 
+dust motes. The iron bed with clean white sheets and a small 
+vase of flowers creates an unexpected sanctuary of hope within 
+the mountain. Weathered daguerreotype aesthetic with thin 
+gothic borders.
+
+================================================================================
+【疗养院阳台 — Base Prompt】
+================================================================================
+
+background dataset,
+masterpiece, best quality,
+monochrome, greyscale, black and white, high contrast,
+year 1930, 
+graphic novel style, ink wash,
+horror \(theme\), eerie, unsettling,
+gothic, weathered, distressed,
+film grain, daguerreotype, fog,
+dramatic shadows, chiaroscuro, low-key lighting,
+pencil sketch, crosshatching, gritty texture,
+thin white ornamental borders,
+scenery, balcony, terrace, sanatorium balcony,
+mountain view, fog, grey sky,
+wet slippery floor, 1.3::slightly sloped for drainage::, puddles,
+deck chairs in rows, lounge chairs,
+thin blankets on chairs,
+stone railing, wrought iron details,
+winter, cold, overcast, pale diffused sunlight,
+distant silhouettes of patients,
+quiet, still, melancholic, 1.3::liminal space::,
+wide shot, exterior, outdoor. 
+The sanatorium balcony — the core treatment space for "fresh air 
+therapy," where patients spend 6-12 hours daily even in winter. 
+The floor slopes slightly for rain drainage. Rows of deck chairs 
+hold distant patient silhouettes in thin blankets, their spines 
+visible through hospital gowns. Grey fog presses against the 
+railing. A liminal space between the mountain and the clinical 
+interior. Weathered daguerreotype textures matching the gothic 
+horror visual novel UI.
+
+================================================================================
+【Undesired Content — 通用】
+================================================================================
+
+worst quality, low quality, normal quality, lowres, jpeg artifacts,
+signature, watermark, text, humans, people, characters,
+color, vibrant, saturated, bright, colorful,
+realistic, photorealistic, 3d,
+smooth, clean, pristine, new, glossy,
+digital art, vector art, flat color,

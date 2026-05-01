@@ -1,0 +1,74 @@
+---
+description: Prompt 使用规范 — 如何查询、组合、验证 prompts，确保风格一致
+alwaysApply: false
+---
+
+# Prompt 使用规范
+
+## 一、核心原则
+
+本项目所有 AI 美术资产通过 `prompts/` 目录下的 prompt 文件统一管理。
+**不要在开发过程中即兴编写 prompt**，始终从对应文件中复制。
+
+## 二、Prompt 选择决策树
+
+```
+需要什么类型的资产？
+│
+├─ 角色立绘 → prompts/01-角色/
+│   ├─ 确认角色名 → 复制 Base Prompt + Character Prompt
+│   ├─ 确认需要的表情/姿势 → 从差分列表中选择 Layer tags
+│   └─ 立绘必须包含 clean white background for sprite extraction
+│
+├─ 场景背景 → prompts/02-背景场景/
+│   ├─ 必须使用 background dataset, 前缀
+│   └─ 确认场景时间（日/夜）→ 选择对应分支
+│
+├─ 事件 CG → prompts/03-事件CG/
+│   ├─ 确认 CG 名称 → 复制对应文件
+│   ├─ 多角色 CG 需要同时使用 Character Prompt 框
+│   └─ 使用 cinematic composition 引导构图
+│
+├─ UI 元素 → prompts/04-UI元素/
+│   └─ 必须对齐 ess UI Theme 风格
+│
+└─ 特效/叠加 → prompts/05-氛围与特效/
+    └─ 生成后叠加使用，注意透明度
+```
+
+## 三、Prompt 组合模板
+
+```bash
+# 角色立绘
+Base Prompt = master/best + 主风格基准.txt(标签) + 角色文件(标签) + 角色文件(自然语言)
+Character Prompt = 角色文件(分层标签)
+Undesired Content = negative_prompt.txt
+
+# 场景背景
+Base Prompt = background dataset, + master/best + 主风格基准(标签) + 场景文件(全部)
+Undesired Content = 场景文件(Undesired)
+
+# 事件CG
+Base Prompt = master/best + 主风格基准(标签) + CG文件(标签+自然语言)
+Character Prompt 1/2 = CG文件(对应角色标签)
+Undesired Content = negative_prompt.txt
+```
+
+## 四、风格一致性检查
+
+生成后检查以下一致性：
+- [ ] 色调是否统一（sepia + umber + muted tones）
+- [ ] 纹理是否统一（watercolor + ink + charcoal）
+- [ ] 是否有 AI 味残留（检查是否出现机械线条、平滑渐变、cel shading）
+- [ ] 立绘是否易于去底（背景是否干净）
+- [ ] 与 ess UI Theme 是否协调（不会过于明亮或现代）
+
+## 五、修改风格的正确方式
+
+如需调整整体风格，**只修改以下文件**：
+- `prompts/00-风格定义/主风格基准.txt` — 核心画风
+- `prompts/00-风格定义/黑白恐怖风格.txt` — 恐怖氛围
+- `prompts/00-风格定义/质量标签集合.txt` — 质量标签 + 参数
+- `prompts/00-风格定义/negative_prompt.txt` — 负向标签
+
+**不要**在单个角色/场景文件中即兴修改风格标签。

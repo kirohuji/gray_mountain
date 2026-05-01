@@ -1,0 +1,54 @@
+================================================================================
+            上山路途 — 汤姆登灰山 CG (V4.5 + ess UI Theme)
+================================================================================
+
+【剧情】汤姆独自攀登泥泞山路。刚下过雨，每一步都更加粘稠。
+空气稀薄难以呼吸——像在试探。雾中教堂若隐若现如警告。
+
+================================================================================
+【Base Prompt】
+================================================================================
+
+masterpiece, best quality,
+monochrome, greyscale, black and white, high contrast,
+year 1930, 
+graphic novel style, ink wash,
+horror \(theme\), eerie, ominous, unsettling atmosphere,
+gothic, weathered, distressed, aged,
+film grain, daguerreotype, fog,
+dramatic shadows, chiaroscuro, low-key lighting,
+pencil sketch, etching, crosshatching, gritty texture,
+thin white ornamental borders,
+1boy, solo,
+tall man, slim, painter, winter coat,
+climbing steep muddy mountain path, slippery rocks,
+struggling, exhausted, gasping, 1.3::air growing thicker::,
+breath visible in freezing air,
+2.0::thick fog::, mist, very low visibility,
+dead twisted trees, barren skeletal branches,
+small figure against massive mountain, overwhelming scale,
+steep treacherous winding path, limestone rocks,
+in far distance, 1.2::church spire barely visible through fog::,
+gothic atmosphere, dread, isolation, determination,
+cinematic composition, wide shot, seen from behind. 
+A wide cinematic shot of a lone painter climbing a treacherous 
+mountain path through impenetrable fog. The air grows thicker 
+with every step — the mountain testing him. Dead twisted trees 
+line the path like skeletal sentinels. Far in the distance, a 
+church spire barely materializes through the mist like a warning. 
+The composition emphasizes the crushing scale of the mountain 
+against the small determined figure. Weathered daguerreotype 
+textures with film grain and thin gothic ornamental borders 
+matching the ess horror visual novel UI.
+
+================================================================================
+【Undesired Content】
+================================================================================
+
+worst quality, low quality, normal quality, lowres,
+bad anatomy, bad hands, missing fingers, poorly drawn face,
+bad proportions, cropped, jpeg artifacts,
+signature, watermark, text, color, vibrant, saturated,
+bright, colorful, realistic, photorealistic, 3d,
+smooth, clean, pristine, new, glossy,
+digital art, vector art, flat color,

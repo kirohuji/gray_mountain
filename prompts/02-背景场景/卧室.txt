@@ -1,0 +1,51 @@
+================================================================================
+              卧室 — 波士顿比肯山褐石联排别墅 (V4.5)
+================================================================================
+
+【场景说明】
+汤姆父母的旧宅，位于波士顿比肯山（Beacon Hill），褐石联排别墅。
+黄铜底座老台灯（从老房子带来的），昏暗灯光下卧室更显幽深。
+艾琳娜夜里咳嗽，汤姆惊醒。
+
+================================================================================
+【Base Prompt】
+================================================================================
+
+background dataset,
+masterpiece, best quality,
+monochrome, greyscale, black and white, high contrast,
+year 1930, 
+graphic novel style, ink wash,
+gothic, weathered, distressed, aged,
+film grain, daguerreotype, dust motes,
+dramatic shadows, chiaroscuro, low-key lighting,
+pencil sketch, crosshatching, gritty texture,
+thin white ornamental borders,
+scenery, bedroom interior, 1930s Boston brownstone bedroom,
+old house, wooden floorboards, 1.3::peeling wallpaper::,
+brass table lamp, dim warm light, single pool of light,
+dust motes floating in light beam,
+iron bed frame, quilt, rumpled sheets,
+wooden nightstand, water glass, medicine bottle,
+window, dark night outside Boston,
+intimate, quiet, stillness, oppressive silence,
+wide shot, room interior, no humans. 
+A dimly lit 1930s bedroom in a Boston Beacon Hill brownstone. 
+A single brass lamp casts a weak pool of light, revealing dust 
+motes suspended in the air. The iron bed with rumpled sheets 
+speaks of restless nights and illness. Deep shadows swallow the 
+corners of the room. Rendered in the weathered daguerreotype 
+aesthetic of a gothic horror visual novel UI — film grain, 
+distressed textures, dramatic chiaroscuro, and thin ornamental 
+white borders.
+
+================================================================================
+【Undesired Content】
+================================================================================
+
+worst quality, low quality, normal quality, lowres, jpeg artifacts,
+signature, watermark, text, humans, people, characters,
+color, vibrant, saturated, bright, colorful,
+realistic, photorealistic, 3d,
+smooth, clean, pristine, new, glossy,
+digital art, vector art, flat color,

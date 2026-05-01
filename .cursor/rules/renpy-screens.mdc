@@ -1,0 +1,45 @@
+---
+description: Ren'Py Screen/UI 规范 — 逻辑分离、GUI 定制、Screen 模式
+globs: **/*.rpy
+alwaysApply: false
+---
+
+# Ren'Py Screen 与 UI 规范
+
+## Screen 核心原则：逻辑与 UI 分离
+
+Screen 的 `action` 只做 **跳转或简单赋值**，复杂业务逻辑放到 `label` 中处理。
+
+```renpy
+# ❌ 禁止：在 action 中堆叠复杂逻辑
+screen bad_example():
+    textbutton "确认":
+        action [
+            SetVariable("x", 1),
+            SetVariable("y", 2),
+            SetVariable("z", x + y),  # 容易出错
+            Jump("next_label")
+        ]
+
+# ✅ 推荐：action 只跳转
+screen good_example():
+    textbutton "确认":
+        action Jump("handle_confirm")
+
+label handle_confirm:
+    $ x = 1
+    $ y = 2
+    $ z = x + y
+    jump next_label
+```
+
+## Screen 结构
+
+- 使用 `zorder` 控制层级。
+- 使用 `xalign`/`yalign` 定位元素。
+- 在脚本中用 `show screen` / `hide screen` 控制显示。
+
+## GUI 主题
+
+- 所有颜色和字体在 `gui.rpy` 中统一管理（`gui.accent_color`、`gui.text_font` 等）。
+- 使用 `define gui.*` 声明，不要在 Screen 中硬编码样式值。

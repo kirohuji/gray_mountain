@@ -1,0 +1,86 @@
+================================================================================
+              灰山教堂 — 山中废弃教堂 (V4.5)
+================================================================================
+
+【场景说明】
+东南山脚进山必经之路上的石头教堂，约150年历史（1780年代建）。
+外墙覆盖灰绿色地衣，苔藓从石缝长出如死者胡茬。
+教堂仿佛是从山中"长"出来的。现任神父：迈克尔·奥布莱恩（接替1920年去世的老莫纳汉）。
+内部有诡异圣母抱子壁画——脸已融化。
+
+================================================================================
+【外景 — Base Prompt】
+================================================================================
+
+background dataset,
+masterpiece, best quality,
+monochrome, greyscale, black and white, high contrast,
+year 1930, 
+graphic novel style, ink wash,
+horror \(theme\), eerie, ominous, unsettling atmosphere, dread,
+gothic, decay, weathered, distressed,
+film grain, daguerreotype, fog,
+dramatic shadows, chiaroscuro, low-key lighting,
+pencil sketch, etching, crosshatching, gritty texture,
+thin white ornamental borders,
+scenery, old stone church, 150-year-old church on mountainside,
+hidden in thick fog, barely visible, 1.5::disappearing into mist::,
+crumbling stone walls, covered in grey-green lichen,
+dead white moss sprouting from cracks like dead man's beard,
+stained glass window, dusty, grimy, obscured,
+abandoned, decaying, ancient, lonely,
+1.3::church grown from mountain::, organic architecture,
+in the mountains, surrounded by oppressive fog,
+wide shot, exterior, no humans. 
+An ancient stone church — 150 years old — stands on the 
+mountainside, half-consumed by thick grey fog. Its walls are 
+covered in grey-green lichen like a skin disease, with white 
+moss sprouting from cracks like a dead man's beard. The church 
+seems not built but grown — a stone organism emerging from the 
+mountain's flesh. Rendered in weathered daguerreotype textures 
+with film grain, dramatic chiaroscuro, and thin gothic ornamental 
+borders matching the horror visual novel UI aesthetic.
+
+================================================================================
+【内景 — Base Prompt】
+================================================================================
+
+background dataset,
+masterpiece, best quality,
+monochrome, greyscale, black and white, high contrast,
+year 1930, 
+graphic novel style, ink wash,
+horror \(theme\), eerie, ominous, unsettling atmosphere,
+gothic, decay, weathered, distressed,
+film grain, daguerreotype,
+dramatic shadows, chiaroscuro, low-key lighting,
+pencil sketch, crosshatching, gritty texture,
+thin white ornamental borders,
+scenery, church interior, gothic church interior,
+dark, dim, faint light through filthy stained glass,
+wooden pews, dusty, cobwebs,
+altar, crucifix, religious iconography,
+grotesque mural on wall, madonna and child painting,
+1.5::melting face::, 1.5::faceless::,
+blurred face but smiling outline remains, uncanny,
+sacred but deeply wrong, 1.3::blasphemous::,
+candlelight, single lantern, shadows dancing on stone walls,
+wide shot, interior, no humans. 
+The dark interior of the ancient church. Faint light struggles 
+through decades of grime on the stained glass. On the wall, a 
+grotesque mural — the Madonna and Child, but her face has 
+melted into the background, leaving only the unsettling 
+suggestion of a smile. The sacred space feels fundamentally 
+violated. Rendered in weathered daguerreotype textures with 
+film grain and thin gothic borders.
+
+================================================================================
+【Undesired Content】
+================================================================================
+
+worst quality, low quality, normal quality, lowres, jpeg artifacts,
+signature, watermark, text, humans, people, characters,
+color, vibrant, saturated, bright, colorful,
+realistic, photorealistic, 3d,
+smooth, clean, pristine, new, glossy,
+digital art, vector art, flat color,

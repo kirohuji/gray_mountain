@@ -1,0 +1,57 @@
+================================================================================
+            疗养院·希望 — 阳光病房 CG (V4.5 + ess UI Theme)
+================================================================================
+
+【剧情】汤姆第一次站在疗养院病房。巨大窗户从穹顶延伸到墙壁中段。
+暖阳照射进来，空气清新混杂阳光气味。他深吸一口气——
+也许这里真的能治好艾琳娜。
+
+================================================================================
+【Base Prompt】
+================================================================================
+
+masterpiece, best quality,
+monochrome, greyscale, black and white, high contrast,
+year 1930, 
+graphic novel style, ink wash,
+gothic, weathered, distressed, aged,
+film grain, daguerreotype,
+dramatic shadows, chiaroscuro, low-key lighting,
+pencil sketch, etching, crosshatching,
+thin white ornamental borders,
+1boy, solo,
+tall man, slim, painter, winter coat removed,
+dress shirt, suspenders,
+standing in sanatorium room,
+looking up toward light, hopeful expression, slight weary smile,
+relief, breathing deeply, at peace in this moment,
+enormous arched window, floor to ceiling, like church window,
+2.0::sunlight streaming through::, god rays, warm light beams,
+dust motes dancing in sunbeams, sparkling,
+white limestone walls, clean, serene,
+quiet, 1.5::fragile moment of hope::, respite from dread,
+cinematic composition, low angle shot from behind,
+silhouette against bright window, figure bathed in light,
+light and shadow, dramatic lighting, 1.3::almost spiritual::. 
+A quietly hopeful cinematic illustration — the painter stands 
+before the enormous arched window of the sanatorium, bathed in 
+warm sunlight streaming through like a blessing. He looks up 
+with a weary but hopeful expression, breathing deeply as dust 
+motes dance in golden beams. After so much darkness, this moment 
+of light feels almost sacred. The composition is shot from a 
+low angle behind him, his silhouette framed against the brilliant 
+window. Weathered daguerreotype textures with thin gothic 
+ornamental borders — matching the ess horror visual novel UI, 
+but here the horror recedes and hope enters.
+
+================================================================================
+【Undesired Content】
+================================================================================
+
+worst quality, low quality, normal quality, lowres,
+bad anatomy, bad hands, missing fingers, poorly drawn face,
+bad proportions, cropped, jpeg artifacts,
+signature, watermark, text, color, vibrant, saturated,
+bright, colorful, realistic, photorealistic, 3d,
+smooth, clean, pristine, new, glossy,
+digital art, vector art, flat color,

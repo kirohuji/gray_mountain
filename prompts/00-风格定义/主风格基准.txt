@@ -1,0 +1,90 @@
+================================================================================
+    主风格基准 — 混合媒材：水彩 + 墨线 + 炭笔 (V4.5)
+================================================================================
+
+【设计理念】
+《灰山》是克苏鲁式心理恐怖视觉小说。美术风格应体现：
+- 水彩的渗开与不可控 → 呼应"雾"和"边界模糊"的恐怖
+- 炭笔的粉末粗糙 → 呼应石灰岩山体、肺部病变的纹理
+- 墨线的手工不完美 → 角色有辨识度，避免 AI 流水线感
+- 手工纸纹理 → 天然做旧，所有图层共享同一基底
+
+【UI 主题兼容】
+ess Black & White Horror UI Theme 的 weathered 美学与本风格兼容：
+- UI 的"风雨侵蚀" → 对应水彩的渗色和纸纹
+- UI 的"纤细白线" → 对应墨线的利落勾勒
+- UI 的"深黑背景" → 对应炭笔的浓重阴影
+
+================================================================================
+【画风标签组 — 放在 prompt 最前面】
+================================================================================
+
+monochrome, greyscale, sepia tone, umber, muted tones,
+limited palette, desaturated,
+year 1930,
+
+# 混合媒材基底
+mixed media, traditional media,
+watercolor wash, wet on wet, pigment granulation,
+ink line art, dip pen lines, uneven ink flow,
+charcoal shading, charcoal smudge, powdery texture,
+
+# 手工质感
+handmade, organic, rough watercolor paper, paper texture,
+bleeding edges, ink bleed, water stain,
+visible brushstrokes, painterly, loose brushwork,
+
+# 光影
+dramatic shadows, chiaroscuro, low-key lighting,
+atmospheric, fog, mist, haze,
+
+================================================================================
+【自然语言风格描述 — 放在标签后面】
+================================================================================
+
+. A mixed media illustration combining watercolor washes, fine 
+dip-pen ink lines, and charcoal shading on rough watercolor 
+paper. The watercolor bleeds and granulates organically at the 
+edges, creating wet atmospheric washes for backgrounds and fog. 
+Charcoal powder smudges build deep shadows with a rough powdery 
+texture like limestone dust. Ink lines are hand-drawn and slightly 
+uneven — organic, not mechanical — defining character silhouettes 
+and architectural details with deliberate imperfection. The 
+overall palette is monochrome with sepia and umber undertones, 
+like a vintage naturalist's field sketch that has been touched 
+by something darker. The handmade quality is essential — visible 
+brushstrokes, ink bleeds, paper grain. This is not digital art 
+pretending to be traditional; it is a traditional media aesthetic 
+rendered with the textures of water, pigment, charcoal dust, and 
+rough paper.
+
+================================================================================
+【完整 Base Prompt 模板】
+================================================================================
+
+monochrome, greyscale, sepia tone, umber, muted tones,
+limited palette, desaturated, year 1930,
+mixed media, traditional media,
+watercolor wash, pigment granulation,
+ink line art, dip pen lines, uneven ink flow,
+charcoal shading, charcoal smudge, powdery texture,
+handmade, rough watercolor paper, paper texture,
+bleeding edges, ink bleed, water stain,
+visible brushstrokes, painterly, loose brushwork,
+dramatic shadows, chiaroscuro, low-key lighting,
+atmospheric, fog, mist. 
+A mixed media illustration on rough watercolor paper — 
+watercolor washes bleeding at the edges, fine ink lines defining 
+forms with organic imperfection, charcoal smudges building deep 
+powdery shadows. Monochrome palette with sepia and umber undertones. 
+The textures of water, pigment, charcoal dust, and paper grain are 
+all visible. Handmade, atmospheric, not digital.
+
+================================================================================
+【说明】
+- 放弃 graphic novel/daguerreotype → 那是"模仿老照片"，本质仍是摄影
+- 采用 mixed media/watercolor/ink/charcoal → "手工绘画"，有机质感
+- 关键反 AI 标签：uneven ink flow, bleeding edges, organic, handmade, rough paper
+- 色调保留 sepia tone, umber — 自然的暖灰，而非机械的纯黑白
+- year 1930 保留，锁定时代感
+================================================================================

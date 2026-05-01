@@ -1,0 +1,89 @@
+---
+description: Ren'Py 美术资产管线规范 — LayeredImage 分层结构、命名约定、分辨率标准、导出流程
+globs: **/definitions.rpy,**/images/**
+alwaysApply: false
+---
+
+# Ren'Py 美术资产管线规范
+
+## 一、LayeredImage 分层标准
+
+本项目所有角色立绘使用 Ren'Py `layeredimage` 实现多层合成。
+每个角色按 **5 层结构** 组织：
+
+```renpy
+layeredimage tom:
+    always: "images/sprites/tom/body.webp"
+
+    group head:
+        attribute normal default: "images/sprites/tom/head_normal.webp"
+
+    group eyes:
+        attribute tired default: "images/sprites/tom/eyes_tired.webp"
+        attribute sharp: "images/sprites/tom/eyes_sharp.webp"
+        attribute tearful: "images/sprites/tom/eyes_tearful.webp"
+        attribute soft: "images/sprites/tom/eyes_soft.webp"
+
+    group mouth:
+        attribute anxious default: "images/sprites/tom/mouth_anxious.webp"
+        attribute sad: "images/sprites/tom/mouth_sad.webp"
+        attribute determined: "images/sprites/tom/mouth_determined.webp"
+        attribute scared: "images/sprites/tom/mouth_scared.webp"
+        attribute tender: "images/sprites/tom/mouth_tender.webp"
+
+    group extra:
+        attribute stubble: "images/sprites/tom/extra_stubble.webp"
+        attribute sweat: "images/sprites/tom/extra_sweat.webp"
+```
+
+### 分层定义
+
+| Layer | 内容 | 必须属性 | 可选属性 |
+|-------|------|---------|---------|
+| body | 身体+基础服装 | `normal` | 换装属性 |
+| head | 头部+发型基础 | `normal` | — |
+| eyes | 眼睛状态 | 至少3种 | 含泪/闭眼/锐利 |
+| mouth | 嘴部表情 | 至少4种 | 配合情绪 |
+| extra | 叠加层（黑眼圈/汗水/胡茬/手势/道具） | 无默认 | 按剧情触发 |
+
+### 命名约定
+
+```
+images/sprites/{角色名}/
+├── body_normal.webp            # 身体基础
+├── body_{服装}.webp            # 换装变体
+├── head_normal.webp            # 头部基础
+├── eyes_{状态}.webp            # 眼睛 → eyes_tired, eyes_sharp, eyes_soft...
+├── mouth_{表情}.webp           # 嘴部 → mouth_sad, mouth_smile, mouth_cough...
+├── extra_{叠加}.webp           # 额外 → extra_stubble, extra_sweat, extra_blood...
+```
+
+## 二、图像格式与分辨率
+
+| 资产类型 | 格式 | 分辨率 | 说明 |
+|---------|------|--------|------|
+| 立绘分层 | WebP (lossless) | 832×2176 | 全身像，上方预留头部替换空间 |
+| 背景图 | WebP | 1920×1080 | 全屏背景 |
+| CG 插画 | WebP | 1920×1080 | 事件 CG |
+| UI 元素 | PNG | 按需 | 小图标/边框/按钮 |
+| 过渡/特效 | PNG 序列 | 按需 | 帧动画 |
+
+## 三、美术风格统一检查清单
+
+生成任何美术资产前，确认：
+- [ ] 使用对应的 `prompts/` 文件中的 Base + Character Prompt
+- [ ] 混合媒材标签组完整：`watercolor wash, ink line art, charcoal shading`
+- [ ] 色调：`sepia tone, umber, muted tones`
+- [ ] 质感：`rough watercolor paper, bleeding edges, handmade`
+- [ ] 反 AI 味：`uneven ink flow, organic, visible brushstrokes`
+- [ ] Undesired Content 包含：`perfect lines, mechanical precision, anime coloring`
+- [ ] 立绘有 `clean white background for sprite extraction`
+
+## 四、从 Prompt 到资产的流程
+
+1. 查询 `docs/requirements/02-资产清单.md` 确认需要生成的资产
+2. 从 `prompts/` 对应目录复制 Base Prompt + Character Prompt
+3. 生成 → 挑选最佳结果
+4. 手动去底（立绘）/ 裁剪到标准分辨率
+5. 导出为 WebP → 放入 `game/images/sprites/` 对应目录
+6. 在 `definitions.rpy` 中注册 `layeredimage`

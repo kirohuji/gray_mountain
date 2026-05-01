@@ -1,0 +1,95 @@
+---
+description: Ren'Py 章节结构规范 — 脚本组织、Label 链、资源预加载
+globs: **/script.rpy,**/ch*.rpy
+alwaysApply: false
+---
+
+# Ren'Py 章节结构规范
+
+## 一、文件组织
+
+每个章节一个独立 `.rpy` 文件，放在 `game/scripts/` 下：
+
+```
+game/scripts/
+├── ch00_prologue.rpy      # 序章：梦境 + 惊醒 + 好友来访
+├── ch01_diagnosis.rpy     # 第一章：会诊室确诊 + 下定决心
+├── ch02_ascension.rpy     # 第二章：登灰山 + 教堂相遇 + 抵达疗养院
+├── ch03_sanatorium.rpy    # 第三章：疗养院生活 + 艾琳娜恶化
+├── ch04_collapse.rpy      # 第四章：艾琳娜死亡 + 汤姆崩溃
+├── ch05_escape.rpy        # 第五章：精神病院 + 出逃 + 结局分支
+└── definitions.rpy        # 集中定义（角色/图像/音频）
+```
+
+## 二、Label 命名约定
+
+```renpy
+# 章节入口
+label ch00_start:      # 序章开始
+label ch01_start:      # 第一章开始
+
+# 章节内场景
+label ch01_diagnosis:  # 会诊室场景
+label ch01_decision:   # 下定决心场景
+
+# 结局
+label ending_a:        # 结局A：记忆消失
+label ending_b:        # 结局B：自杀
+label ending_c:        # 结局C：精神病院10年
+label ending_d:        # 结局D：山洞死亡
+label ending_e:        # 结局E：山洞获救
+```
+
+## 三、每章必需的初始化
+
+```renpy
+label ch01_start:
+    # 1. 预加载本章资源
+    $ renpy.image_preload("images/bg/clinic.webp")
+    $ renpy.image_preload("images/sprites/tom/body_normal.webp")
+
+    # 2. 设置本章音乐
+    play music bgm_clinic fadein 1.0
+
+    # 3. 章节标题
+    scene black
+    centered "第一章：会诊室"
+    scene bg clinic day with dissolve
+
+    # 4. 进入场景
+    jump ch01_diagnosis
+```
+
+## 四、CG 触发规范
+
+```renpy
+# CG 触发前：淡出 UI
+window hide
+scene black with dissolve
+# 显示 CG
+show cg nightmare_mountain with dissolve
+pause 3.0
+# 叙述文字叠加
+nvl_narrator "灰山正在呼吸。"
+nvl clear
+# CG 结束：回到场景
+scene bg clinic day with dissolve
+window auto
+```
+
+## 五、分支与旗标
+
+```renpy
+# 旗标在 definitions.rpy 中声明
+default flags = {}
+
+# 剧情中设置
+$ flags["met_priest"] = True
+$ flags["elena_worsened"] = True
+
+# 结局判定
+if flags.get("elena_worsened") and not flags.get("escaped_asylum"):
+    jump ending_d  # 山洞死亡
+elif flags.get("elena_worsened") and flags.get("rescued"):
+    jump ending_e  # 山洞获救
+```
