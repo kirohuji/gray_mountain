@@ -1,0 +1,135 @@
+================================================================================
+    Scene F · 她 — 第一章终幕CG (V4.5 · 混合媒材)
+================================================================================
+
+【场景说明】
+探索完成触发。电话响了——吉姆的声音被低频嗡鸣覆盖。
+然后——卧室传来声音：布料摩擦，光脚踩在木地板上。
+汤姆转身。艾琳娜站在卧室门口。
+不是疗养院末期的样子——是健康的、有血色的、有光泽的。
+她微笑着走过来，手指贴上他的脸颊。温的。软的。
+
+窗外开始飘落灰白色的细尘——不是雪。只有他的窗户在落。
+他口袋里的石子振动。每分钟六次。
+
+================================================================================
+【终幕CG — Base Prompt】
+================================================================================
+
+masterpiece, best quality,
+monochrome, greyscale, sepia tone, umber, muted tones,
+limited palette, desaturated, year 1930,
+mixed media, traditional media,
+watercolor wash, pigment granulation, wet on wet,
+ink line art, dip pen lines, uneven ink flow,
+charcoal shading, charcoal smudge, powdery texture,
+handmade, rough watercolor paper, paper texture,
+bleeding edges, ink bleed, water stain,
+visible brushstrokes, painterly, loose brushwork,
+dramatic shadows, chiaroscuro, low-key lighting,
+atmospheric,
+horror \(theme\), psychological horror, lovecraftian horror,
+eerie, unsettling atmosphere,
+1.5::outline dissolving::, 1.5::form becoming indistinct::,
+edge of perception, liminal, threshold,
+scenery, apartment living room, 1930s apartment interior,
+man standing in center of room, turned toward corridor,
+back to viewer, silhouetted, tense posture, frozen,
+woman in doorway at end of corridor,
+Elena, female, soft light around her,
+wearing pale house dress, simple, cotton,
+hair soft and lustrous, healthy, not withered,
+skin with color, cheeks pink, lips pink,
+eyes brown, normal, clear, not filmed over,
+gentle smile, natural, warm,
+arm half-raised, reaching forward,
+fingers about to touch man's face,
+tenderness, intimacy, reunion,
+but wrongness beneath — too healthy, impossible, uncanny,
+1.3::she should be dead::,
+window behind man, pale grey light,
+greyish-white dust falling outside window,
+dust like snow but not snow, fine powder, limestone dust,
+1.5::ash falling only on this window::,
+dust settling on windowsill, silent,
+visible breath, cold air,
+pocket of man's coat — slight bulge, two small stones,
+1.3::stones vibrating at heartbeat rhythm::,
+half-light, twilight, neither day nor night,
+cinematic composition, wide shot, deep depth,
+room interior with figure in doorway,
+watercolor bleeding at edges like fog consuming the scene,
+charcoal shadows deeper than natural, crawling at floor edges,
+ink lines defining Elena's silhouette with deliberate fragility,
+handmade paper grain showing through — this is a surface,
+and surfaces can be scratched away.
+. The final scene of Chapter One. A man stands frozen in the
+center of his apartment living room, back to the viewer, turned
+toward the corridor. In the doorway at the end of the corridor
+stands Elena — his wife — healthy, warm, alive. She wears a pale
+house dress, her hair soft with the luster of health, her cheeks
+pink, her lips pink, her brown eyes clear. She smiles gently,
+one hand raised, fingers about to touch his face. It is a moment
+of impossible tenderness. Behind him, through the window, a fine
+greyish-white dust falls — like snow but not snow — settling
+soundlessly on the windowsill. It falls only on his window. In
+his coat pocket, two small stones vibrate at the rhythm of a
+heartbeat. The watercolor washes bleed at the edges of the scene
+like fog consuming a memory. Charcoal shadows are darker than
+they should be, crawling at the edges of the floorboards. Ink
+lines define Elena's form with deliberate fragility — she is
+there, solid, warm — but the line work trembles, as if she might
+dissolve back into the paper at any moment. The handmade paper
+grain shows through everything — a reminder that this is a
+surface, and what lies beneath the surface is not blank.
+
+================================================================================
+【艾琳娜面部特写·变体 — 叠加 Prompt】
+================================================================================
+
+# 当画面定格在她脸上时
+
+close-up, female face,
+Elena, soft features, warm expression,
+brown eyes, clear, alive, no film, no whiteness,
+gentle smile, slightly parted lips,
+head tilted slightly, questioning,
+1.3::looking at someone she hasn't seen in a long time::,
+hair framing face, healthy texture,
+watercolor wash for skin warmth,
+charcoal light shading for cheekbones,
+ink lines fine and delicate for eyelashes and brow,
+tenderness with something underneath,
+1.2::too alive for someone who should be dead::,
+
+================================================================================
+【窗外落尘·特写变体 — 叠加 Prompt】
+================================================================================
+
+# 当画面展示窗外落尘时
+
+close-up, window, windowsill,
+greyish-white dust falling, floating downward,
+fine particles, limestone dust, ash-like,
+dust settling on sill, thin layer, soundless,
+contrast — dust only at this window, other buildings clear,
+1.5::snow that is not snow::,
+watercolor pigment granulation for dust particles,
+charcoal smudge for settled layer,
+ink dots for individual floating motes,
+eerie, wrongness, isolation of phenomenon,
+
+================================================================================
+【Undesired Content】
+================================================================================
+
+worst quality, low quality, normal quality, lowres, jpeg artifacts,
+signature, watermark, text, letters, words,
+color, vibrant, saturated, bright, colorful,
+realistic, photorealistic, 3d,
+smooth, clean, pristine, new, glossy,
+digital art, vector art, flat color,
+daguerreotype, film grain, photograph, lens flare,
+monster, ghost, zombie, undead, corpse, decay, rot,
+horror makeup, wounds, blood, gore,
+smiling creepily, evil smile, sinister, malicious,

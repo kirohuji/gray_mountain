@@ -1,0 +1,143 @@
+================================================================================
+    贯穿元素 — 灰白色粉末 · 电话嗡鸣 (V4.5 · 混合媒材)
+================================================================================
+
+【场景说明】
+第一章有两个贯穿全章的核心视觉/听觉元素：
+
+1. 灰白色粉末 —— 出现在行李袋、锅底、滤芯、栏杆、外套、窗外的每一处。
+   质地细滑，不像灰尘，更像石粉。没有气味，但吸入时鼻腔有微弱的刺刺感。
+   在阳光下——不是往下落的，是向上升的。
+
+2. 电话低频嗡鸣 —— 答录机里的第二条留言，和后续电话里的声音。
+   每分钟六次的节奏——和心跳一样。不是从电话里传来的，更像是电话偶然
+   接收到了什么不应该通过电波传送的声音。低沉得像从很深的地下发出来的。
+
+================================================================================
+【灰白色粉末·纹理叠加层 — Base Prompt】
+================================================================================
+
+background dataset,
+masterpiece, best quality,
+monochrome, greyscale, sepia tone, umber, muted tones,
+limited palette, desaturated,
+mixed media, traditional media,
+charcoal shading, charcoal smudge, powdery texture, rough,
+watercolor wash, pigment granulation, wet on wet,
+ink line art, dip pen lines, uneven ink flow,
+handmade, rough watercolor paper, paper texture,
+bleeding edges, ink bleed, water stain,
+visible brushstrokes, painterly, loose brushwork,
+atmospheric,
+close-up, texture, surface,
+fine greyish-white powder, limestone dust, chalky,
+thin layer of pale dust on dark surface,
+silky texture, smooth fine particles,
+scattered, uneven distribution, organic settling,
+1.5::powder drifting upward::, 1.3::particles suspended in light::,
+dust motes, floating, ascending, defying gravity,
+charcoal dust, pigment powder,
+contrast — pale powder on dark aged surface,
+overlay texture, transparent, alpha channel ready.
+. A texture overlay of fine greyish-white powder — limestone
+dust, chalky, silky to the touch — settled in a thin uneven
+layer on a dark surface. Some particles drift upward, suspended
+in light, defying gravity. Charcoal smudges provide the powdery
+body of the dust, watercolor pigment granulation creates the
+delicate floating particles, and ink dots define isolated motes
+catching the light. The texture is designed as a semi-transparent
+overlay to be superimposed on scene backgrounds throughout
+Chapter One. The powder appears everywhere — on the duffel bag,
+the pot bottom, the water filter, the coat sleeves, the balcony
+railing, and finally falling like snow outside the window.
+
+================================================================================
+【粉末发现·特写CG变体 — Base Prompt】
+================================================================================
+
+# 用于关键粉末发现时刻的特写（如拇指抹过行李袋、掌心粉末）
+
+masterpiece, best quality,
+monochrome, greyscale, sepia tone, umber, muted tones,
+limited palette, desaturated,
+mixed media, traditional media,
+watercolor wash, charcoal shading, charcoal smudge, powdery texture,
+ink line art, dip pen lines, uneven ink flow,
+handmade, rough watercolor paper, paper texture,
+bleeding edges, ink bleed,
+close-up, hand, fingertips,
+thumb wiping greyish-white powder from surface,
+powder on thumb pad, fine, silky, chalky,
+1.5::close examination of unfamiliar substance::,
+human hand, male, painter's hands,
+charcoal smudge on fingerprint ridges,
+watercolor wash for skin tone,
+ink lines for hand contours,
+uncanny, wrongness, subtle horror,
+no face, hand only, intimate detail.
+. A close-up of a painter's hand — thumb wiping a thin layer
+of greyish-white powder from a dark surface. The powder clings
+to the thumb pad, fine and silky like limestone dust. The
+charcoal smudge texture of the powder contrasts with the
+watercolor wash of the skin. Ink lines define the contours of
+the fingers with organic precision. An intimate examination of
+something that should not be there — something that appears in
+every corner of the apartment.
+
+================================================================================
+【电话嗡鸣·氛围CG — Base Prompt】
+================================================================================
+
+masterpiece, best quality,
+monochrome, greyscale, sepia tone, umber, muted tones,
+limited palette, desaturated,
+mixed media, traditional media,
+watercolor wash, pigment granulation, wet on wet,
+ink line art, dip pen lines, uneven ink flow,
+charcoal shading, charcoal smudge, powdery texture,
+handmade, rough watercolor paper, paper texture,
+bleeding edges, ink bleed, water stain,
+visible brushstrokes, painterly, loose brushwork,
+dramatic shadows, chiaroscuro, low-key lighting,
+horror \(theme\), lovecraftian horror, psychological horror,
+eerie, ominous, unsettling atmosphere, creeping dread,
+scenery, telephone, old rotary phone, 1930s,
+handset against ear, man holding phone,
+man's face half-lit, listening, tense,
+1.5::low frequency hum through receiver::,
+sound waves visualized — vibration lines radiating from earpiece,
+1.3::hum at heartbeat rhythm — six beats per minute::,
+deep underground resonance, seismic vibration,
+telephone cord, coiled, shadow on wall,
+dark room, single lamp, pool of light,
+1.5::something ancient transmitting through telephone lines::,
+charcoal darkness bleeding from phone earpiece,
+ink lines thin and vibrating for hum visualization,
+watercolor coldness spreading from handset,
+cinematic composition, medium shot.
+. A man holds an old rotary telephone handset against his ear in
+a dim room lit by a single lamp. His face is half in shadow,
+tense, listening. From the earpiece, visualized as thin vibrating
+ink lines, emanates a low-frequency hum — six pulses per minute,
+the rhythm of a heartbeat. The hum feels like it comes from deep
+underground, a seismic resonance that should not be able to travel
+through telephone wires. Charcoal darkness bleeds from the
+earpiece like liquid shadow. Watercolor coldness spreads across
+the man's hand holding the receiver. This is not a wrong number
+or interference — it is something ancient finding its way through
+the telephone lines.
+
+================================================================================
+【Undesired Content】
+================================================================================
+
+worst quality, low quality, normal quality, lowres, jpeg artifacts,
+signature, watermark, text, letters, words,
+color, vibrant, saturated, bright, colorful,
+realistic, photorealistic, 3d,
+smooth, clean, pristine, new, glossy,
+digital art, vector art, flat color,
+daguerreotype, film grain, photograph, lens flare,
+modern phone, smartphone, cell phone, mobile,
+modern technology, digital display, screen,
+electric guitar, music notes, musical notation,

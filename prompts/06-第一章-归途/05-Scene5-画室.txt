@@ -1,0 +1,108 @@
+================================================================================
+    Scene 5 · 画室 — 汤姆的工作空间 (V4.5 · 混合媒材)
+================================================================================
+
+【场景说明】
+从走廊右侧进入。这是汤姆的画室——唯一一个闻起来"正常"的房间。
+有松节油的气味、炭笔粉尘的气味、纸张和定画液的气味。
+但画架上的东西让他停住了脚步——一幅他没有画过的画。
+
+可交互物品：画架·新画 / 速写本 / 颜料架·调色盘
+
+================================================================================
+【画室背景 — Base Prompt】
+================================================================================
+
+background dataset,
+masterpiece, best quality,
+monochrome, greyscale, sepia tone, umber, muted tones,
+limited palette, desaturated, year 1930,
+mixed media, traditional media,
+watercolor wash, pigment granulation, wet on wet,
+ink line art, dip pen lines, uneven ink flow,
+charcoal shading, charcoal smudge, powdery texture,
+handmade, rough watercolor paper, paper texture,
+bleeding edges, ink bleed, water stain,
+visible brushstrokes, painterly, loose brushwork,
+dramatic shadows, chiaroscuro, low-key lighting,
+atmospheric,
+gothic, weathered, distressed,
+eerie, unsettling atmosphere,
+scenery, artist studio, painter's studio, 1930s,
+old apartment room converted to studio,
+easel, wooden easel, canvas on easel,
+charcoal sketch on canvas — grey mountain sanatorium balcony,
+work table, cluttered, sketchbook open,
+paint tubes, palette, dried paint,
+pigment rack, jars of brushes, pencils,
+smell of turpentine, charcoal dust in air,
+pale daylight through window, diffused light,
+dust motes floating in light beam,
+creative space, lived-in, orderly chaos,
+wide shot, room interior, no humans.
+. An artist's studio in a 1930s apartment — the only room that
+smells normal. Turpentine, charcoal dust, paper, and fixative
+fill the air. A wooden easel stands by the window holding a
+charcoal sketch — the balcony of Grey Mountain Sanatorium, a
+place the painter doesn't remember drawing. The work table is
+cluttered with an open sketchbook, dried paint tubes, a palette
+with hardened pigment, and jars of brushes. Pale daylight filters
+through the window, catching charcoal dust suspended in the
+air. Watercolor washes create the soft diffusion of light through
+dusty air. Charcoal smudges build the deep shadows under the
+table and behind the easel — the same charcoal dust that coats
+every surface. Ink lines define the easel's wooden joints and
+the bristles of paintbrushes with organic, hand-drawn precision.
+A creative space that has been waiting for its owner — but
+something has been working here in his absence.
+
+================================================================================
+【画架新画·特写变体 — 叠加 Prompt】
+================================================================================
+
+# 当玩家检查画架上的新画时
+
+close-up, canvas on easel,
+charcoal sketch, monochrome drawing,
+sanatorium balcony, lounge chair,
+two figures on balcony, silhouette,
+one figure curled up, sketchbook on lap — the painter,
+one figure reclining on chair, relaxed pose, face unfinished,
+only contour — jaw, cheekbone, forehead arc,
+female figure, recognizable as Elena,
+1.3::drawn by someone who doesn't remember drawing it::,
+familiar brushwork, unmistakable hand,
+unsettling familiarity, uncanny,
+charcoal line quality, smudged edges, powdery surface,
+dip pen accents for fine details, ink lines trembling,
+
+================================================================================
+【速写本地图·特写变体 — 叠加 Prompt】
+================================================================================
+
+# 当玩家翻到速写本的地图页时
+
+close-up, open sketchbook,
+faint charcoal lines, barely visible,
+organic map, not geographic but anatomical,
+mountain interior diagram, branching tubes,
+bronchial patterns, lung-like structures,
+layered depths, spreading downward,
+fractal branching, root system,
+1.5::drawn by hand that doesn't know it's drawing::,
+delicate, thin, barely-there quality,
+charcoal dust residue on page edges,
+paper texture visible through faint marks,
+
+================================================================================
+【Undesired Content】
+================================================================================
+
+worst quality, low quality, normal quality, lowres, jpeg artifacts,
+signature, watermark, text, humans, people, characters,
+color, vibrant, saturated, bright, colorful,
+realistic, photorealistic, 3d,
+smooth, clean, pristine, new, glossy,
+digital art, vector art, flat color,
+daguerreotype, film grain, photograph, lens flare,
+modern art supplies, digital tablet, computer, plastic,

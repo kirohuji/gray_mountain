@@ -1,0 +1,84 @@
+================================================================================
+    Scene 1 · 玄关 — 哈里斯大道公寓入口 (V4.5 · 混合媒材)
+================================================================================
+
+【场景说明】
+第一章探索起点。汤姆从灰山疗养院回到哈里斯大道的公寓。
+吉姆帮他开门后离开，门锁上的声音比需要的更响。
+窗帘拉着，空气沉闷——不是灰尘的气味，是封闭空间自己产生的气味。
+旧木头、干涸的水垢、寂静。
+
+可交互物品：行李袋 / 电话答录机 / 鞋柜 / 玄关镜子
+
+================================================================================
+【玄关背景 — Base Prompt】
+================================================================================
+
+background dataset,
+masterpiece, best quality,
+monochrome, greyscale, sepia tone, umber, muted tones,
+limited palette, desaturated, year 1930,
+mixed media, traditional media,
+watercolor wash, pigment granulation, wet on wet,
+ink line art, dip pen lines, uneven ink flow,
+charcoal shading, charcoal smudge, powdery texture,
+handmade, rough watercolor paper, paper texture,
+bleeding edges, ink bleed, water stain,
+visible brushstrokes, painterly, loose brushwork,
+dramatic shadows, chiaroscuro, low-key lighting,
+atmospheric, hazy, dust motes,
+gothic, weathered, distressed,
+eerie, unsettling atmosphere, stillness,
+scenery, apartment entrance, hallway, 1930s apartment interior,
+old wooden door, brass doorknob, key still in lock,
+narrow entryway, dim light from living room beyond,
+coat rack, shoe cabinet, oak wood, aged,
+telephone on small table, answering machine, red blinking light,
+duffel bag against wall, grey canvas, luggage tag visible,
+full-length mirror on wall beside door,
+curtains drawn in adjacent room, filtered grey light,
+dust particles suspended in still air, stagnant atmosphere,
+closed space, quiet, abandoned feeling,
+wide shot, room interior, no humans.
+. The entryway of a 1930s apartment on Harris Avenue — dim, still,
+abandoned for weeks. A brass key still sits in the lock of the
+heavy wooden door. Beyond the narrow hallway, a living room
+shrouded in drawn curtains. An oak shoe cabinet, a small table
+with a telephone and blinking answering machine, a grey duffel
+bag leaning against the wall, and a full-length mirror on the
+wall beside the door. The air is thick with stillness — not dust
+but the smell of closed space, old wood, dried water stains,
+silence. Watercolor washes create a suffocating haze, charcoal
+smudges deepen the shadows at the edges, and ink lines define
+the architectural details with organic imperfection. The paper
+texture shows through — rough, handmade, like a naturalist's
+field sketch touched by something darker.
+
+================================================================================
+【玄关镜子·异常变体 — 叠加 Prompt】
+================================================================================
+
+# 当玩家触发镜子延迟异常时，叠加以下标签
+# 用法：在 Base Prompt 基础上追加这些标签，增加权重
+
+1.5::reflection slightly delayed::,
+1.5::mirror image not matching::,
+uncanny, wrongness, something off,
+1.3::figure in mirror thinner than reality::,
+sunken eyes, hollow cheeks,
+grey coat, sweat stain at collar,
+1.2::reflection still moving when man has stopped::,
+subtle horror, almost imperceptible,
+
+================================================================================
+【Undesired Content】
+================================================================================
+
+worst quality, low quality, normal quality, lowres, jpeg artifacts,
+signature, watermark, text, humans, people, characters,
+color, vibrant, saturated, bright, colorful,
+realistic, photorealistic, 3d,
+smooth, clean, pristine, new, glossy,
+digital art, vector art, flat color,
+daguerreotype, film grain, photograph, lens flare,
+modern, contemporary, minimalist interior,
