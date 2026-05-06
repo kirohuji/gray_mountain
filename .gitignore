@@ -1,3 +1,15 @@
 .vscode/
 log.txt
 traceback.txt
+/game/cache/
+/game/saves/
+/game/log.txt
+/game/traceback.txt
+/game/errors.txt
+/game/*.rpyc
+/game/*.rpymc
+/game/*.rpa
+/game/*.rpy
+/game/*.rpyc
+/game/*.rpymc
+/game/*.rpa
