@@ -6,5 +6,6 @@
     "**/cache/": true
   },
   "renpyWarp.sdkPath": "d:\\renpy-8.5.2-sdk",
-  "twee3LanguageTools.storyformat.current": "harlowe-3"
+  "twee3LanguageTools.storyformat.current": "harlowe-3",
+  "renpyWarp.renpyExtensionsEnabled": "Enabled"
 }
