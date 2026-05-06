@@ -1,33 +1,34 @@
-2026-05-06 08:41:42 UTC
+2026-05-06 09:12:11 UTC
 Windows-11-10.0.26200-SP0
 Ren'Py 8.5.2.26010301
 
-Early init took 35 ms
-Loading error handling took 15 ms
-Loading script took 111 ms
-Loading save slot metadata took 29 ms
+Early init took 28 ms
+Loading error handling took 14 ms
+Loading script took 81 ms
+Loading save slot metadata took 17 ms
 Loading persistent took 0 ms
-Running init code took 41 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 0 ms
-Reloading save slot metadata took 25 ms
-Dump and make backups took 0 ms
+Running init code took 25 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 9 ms
+Backing up script files to 'C:\\Users\\z1309\\AppData\\Roaming/RenPy/backups\\gray_mountain':
+Dump and make backups took 6 ms
 Cleaning cache took 0 ms
 Making clean stores took 0 ms
-Initial gc took 21 ms
+Initial gc took 23 ms
 DPI scale factor: 2.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object took 21 ms
+Creating interface object took 3 ms
 Init translation took 0 ms
 Cleaning stores took 0 ms
-Load screen analysis took 11 ms
-Analyze screens took 0 ms
-Save screen analysis took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 4 ms
+Save screen analysis took 8 ms
 Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 585 ms
+Save bytecode took 16 ms
+Running _start took 1 ms
+Interface start took 561 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 3072, 1920)
@@ -41,6 +42,25 @@ Screen sizes: virtual=(1920, 1080) physical=(3072, 1728) drawable=(3072, 1728)
 Maximum texture size: 4096x4096
 INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
 INFO:renpy_warp_service:connected to renpy warp socket server on :40111
-INFO:renpy_warp_service:closing websocket connection :40111
-INFO:renpy_warp_service:connection replaced, service exiting
-INFO:renpy_warp_service:service closed
+
+Full traceback:
+  File "game/scripts/ch01_return.rpy", line 6, in script
+    $ renpy.image_preload("images/scene1.png")
+  File "renpy/ast.py", line 1187, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1273, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "game/scripts/ch01_return.rpy", line 6, in <module>
+    $ renpy.image_preload("images/scene1.png")
+      ^^^^^^^^^^^^^^^^^^^                     
+AttributeError: module 'renpy.exports' has no attribute 'image_preload'
+
+While running game code:
+  File "game/scripts/ch01_return.rpy", line 6, in script
+    $ renpy.image_preload("images/scene1.png")
+  File "game/scripts/ch01_return.rpy", line 6, in <module>
+    $ renpy.image_preload("images/scene1.png")
+      ^^^^^^^^^^^^^^^^^^^                     
+AttributeError: module 'renpy.exports' has no attribute 'image_preload'
