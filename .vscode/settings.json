@@ -5,5 +5,6 @@
     "**/*.rpymc": true,
     "**/cache/": true
   },
-  "renpyWarp.sdkPath": "~/Desktop/renpy_game/renpy-8.5.2-sdk"
+  "renpyWarp.sdkPath": "d:\\renpy-8.5.2-sdk",
+  "twee3LanguageTools.storyformat.current": "harlowe-3"
 }
