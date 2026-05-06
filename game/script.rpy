@@ -1,7 +1,7 @@
 ﻿# 灰山 - 主入口脚本
 
 ## 图片定义
-image bg apartment_foyer = "images/scene1.png"
+image bg apartment_foyer = Transform("images/scene1.png", fit="cover")
 
 ## 角色定义
 define jim = Character("吉姆", kind = adv, ctc = "ctc")

@@ -2,8 +2,7 @@
 # 场景 1 - 公寓·玄关
 
 label ch01_start:
-    # 预加载资源
-    $ renpy.image_preload("images/scene1.png")
+    # 预加载资源（图像已通过 image 定义自动加载）
 
     # 章节标题
     scene black

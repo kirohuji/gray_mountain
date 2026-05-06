@@ -27,4 +27,4 @@ AttributeError: module 'renpy.exports' has no attribute 'image_preload'
 Windows-11-10.0.26200-SP0 AMD64
 Ren'Py 8.5.2.26010301
 black_white_horror_ui 1.0
-Wed May  6 17:12:15 2026
+Wed May  6 17:23:23 2026

@@ -7,17 +7,19 @@
 define imfelldwpica_font = "fonts/IMFellDWPica/IMFellDWPica-Regular.ttf"
 define literata_font = "fonts/Literata/Literata-Regular.ttf"
 
+define aashigemingxinpian_font = "fonts/AaShiGeMingXinPian-2.ttf"
+
 ## General Interface
 # The font used for text for user interface elements, like the main and game menus, buttons, and so on.
 define gui.interface_text_font = imfelldwpica_font
 # The accent color is used in many places in the GUI, including titles and labels.
 define gui.accent_color = "#ffffff"
 # In-game text
-define gui.text_font = imfelldwpica_font
+define gui.text_font = aashigemingxinpian_font
 # Color of dialogue text as well as other text displayables (like the sync screen in load/save menu's).
 define gui.text_color = "#ffffff"
 # General buttons
-style button_text font imfelldwpica_font
+style button_text font aashigemingxinpian_font
 style button_text idle_color "#ffffff"
 style button_text hover_color "#9e9e9e"
 style button_text selected_color "#9e9e9e"
@@ -27,7 +29,7 @@ style say_window xalign 0.5
 style say_window xsize 1000
 style say_window ysize 250
 style say_label color "#ffffff"
-style say_label font imfelldwpica_font
+style say_label font aashigemingxinpian_font
 style say_label size 45
 style say_label text_align 0.0
 style namebox padding (0, 0, 0, 0)
@@ -77,7 +79,7 @@ style quick_button_text:
     selected_color "#9e9e9e"
     insensitive_color "#4b4b4b"
 
-define gui.quick_button_text_font = imfelldwpica_font
+define gui.quick_button_text_font = aashigemingxinpian_font
 define gui.quick_button_text_size = 25
 
 ## Frames
@@ -91,7 +93,7 @@ define gui.confirm_frame_borders = Borders(43, 43, 43, 43, 50, 30, 50, 30)
 style choice_button_text:
     yalign 0.5
 
-define gui.choice_button_text_font = imfelldwpica_font
+define gui.choice_button_text_font = aashigemingxinpian_font
 define gui.choice_button_height = 70
 define gui.choice_button_text_idle_color = "#bdbdbd"
 define gui.choice_button_text_hover_color = "#ffffff"
@@ -103,7 +105,7 @@ style nvl_button:
 
 ## Notify
 style notify_frame padding (30, 10, 60, 10)
-style notify_text font imfelldwpica_font
+style notify_text font aashigemingxinpian_font
 style notify_text color "#ffffff"
 
 define gui.notify_frame_borders = Borders(0, 7, 65, 7)
@@ -125,7 +127,7 @@ define gui.navigation_spacing = 10
 style navigation_button_text:
     idle_color "#ffffff"
     hover_color "#9e9e9e"
-    font imfelldwpica_font
+    font aashigemingxinpian_font
     size 40
 
 # The naivgation frame displayable is used to reserve space for the default left side navigation menu.
@@ -135,7 +137,7 @@ style game_menu_navigation_frame:
     yoffset -30
 
 style game_menu_label_text:
-    font imfelldwpica_font
+    font aashigemingxinpian_font
     size 65
 
 style game_menu_label:
