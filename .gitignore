@@ -9,3 +9,4 @@ traceback.txt
 /game/*.rpyc
 /game/*.rpymc
 /game/*.rpa
+/game/libs/
