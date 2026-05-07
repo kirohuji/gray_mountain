@@ -1,0 +1,61 @@
+---
+description: Ren'Py 项目目录结构规范 — 文件组织、职责划分、目录说明
+globs: **/*.rpy,**/images/**
+alwaysApply: true
+---
+
+# Ren'Py 项目目录结构规范
+
+## 一、标准目录树
+
+```
+game/                              # Ren'Py 游戏根目录
+├── script.rpy                     # 主入口：仅做章节跳转（label start）
+├── options.rpy                    # 全局配置（Ren'Py 自动生成）
+├── gui.rpy                        # GUI 基础配置
+├── screens.rpy                    # 自定义屏幕
+├── custom_config.rpy              # 额外 UI/主题配置（如字体、颜色覆盖）
+├── definitions.rpy                # 集中定义：角色、图像别名、音频、存档变量
+│
+├── chapters/                      # 章节剧本
+│   ├── ch01_return.rpy            # 第一章：归途
+│   └── chXX_xxx.rpy               # 后续章节
+│
+├── components/                    # 可复用 UI 组件
+│   ├── image_card.rpy             # 图片卡片组件（screen + transform + 快捷函数）
+│   └── ...                        # 其他组件
+│
+├── images/                        # 图像资源
+│   ├── bg/                        # 背景图
+│   ├── cg/                        # CG 插画
+│   ├── sprites/                   # 角色立绘（分层）
+│   └── ui/                        # UI 元素
+│
+├── audio/                         # 音频资源
+│   ├── bgm/                       # 背景音乐
+│   ├── sfx/                       # 音效
+│   └── voice/                     # 语音（可选）
+│
+├── fonts/                         # 自定义字体
+├── tl/                            # 翻译目录
+└── libs/                          # 第三方库（已加入 .gitignore）
+```
+
+## 二、目录职责
+
+| 目录/文件 | 职责 | 说明 |
+|-----------|------|------|
+| `script.rpy` | 游戏入口 | 仅含 `label start:`，跳转至首个章节。不做其他定义。 |
+| `definitions.rpy` | 全局定义 | `define` 角色/图像别名/音频；`default` 存档变量。 |
+| `chapters/` | 章节剧本 | 每个文件一个章节，`label` 按 `chXX_` 命名。 |
+| `components/` | 可复用组件 | 含 screen + transform + 快捷函数的独立 UI 模块。 |
+| `images/` | 图像资源 | 按类型分子目录，Ren'Py 递归扫描。 |
+| `audio/` | 音频资源 | 按类型分子目录。 |
+
+## 三、组织原则
+
+- **按功能拆分文件**，而非按文件类型。
+- 超过 **1000 行** 的 `.rpy` 文件应拆分。
+- `chapters/` 只放剧情脚本，不放 UI 组件。
+- `components/` 只放可复用的 UI 模块，不放章节剧情。
+- 图像按类型分子目录存放（`bg/`、`sprites/`、`cg/`、`ui/`），Ren'Py 递归扫描 `images/`，分目录不影响引用。

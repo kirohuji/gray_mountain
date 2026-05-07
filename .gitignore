@@ -1,6 +1,4 @@
-.vscode/settings.json
-log.txt
-traceback.txt
+# Ren'Py 生成文件
 /game/cache/
 /game/saves/
 /game/log.txt
@@ -9,4 +7,25 @@ traceback.txt
 /game/*.rpyc
 /game/*.rpymc
 /game/*.rpa
+.vscode/settings.json
+log.txt
+traceback.txt
+errors.txt
+*.rpyc
+*.rpymc
+*.rpa
+
+# 第三方库
 /game/libs/
+
+# 构建产物
+build/
+dist/
+
+# 编辑器配置
+.vscode/
+.idea/
+
+# macOS / 系统文件
+.DS_Store
+Thumbs.db

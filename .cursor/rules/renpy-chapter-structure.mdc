@@ -8,17 +8,14 @@ alwaysApply: false
 
 ## 一、文件组织
 
-每个章节一个独立 `.rpy` 文件，放在 `game/scripts/` 下：
+每个章节一个独立 `.rpy` 文件，放在 `game/chapters/` 下：
 
 ```
-game/scripts/
-├── ch00_prologue.rpy      # 序章：梦境 + 惊醒 + 好友来访
-├── ch01_diagnosis.rpy     # 第一章：会诊室确诊 + 下定决心
-├── ch02_ascension.rpy     # 第二章：登灰山 + 教堂相遇 + 抵达疗养院
-├── ch03_sanatorium.rpy    # 第三章：疗养院生活 + 艾琳娜恶化
-├── ch04_collapse.rpy      # 第四章：艾琳娜死亡 + 汤姆崩溃
-├── ch05_escape.rpy        # 第五章：精神病院 + 出逃 + 结局分支
-└── definitions.rpy        # 集中定义（角色/图像/音频）
+game/chapters/
+├── ch01_return.rpy        # 第一章：归途
+├── ch02_xxx.rpy           # 后续章节
+├── ...
+└── chXX_ending.rpy        # 结局分支
 ```
 
 ## 二、Label 命名约定

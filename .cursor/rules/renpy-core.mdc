@@ -55,3 +55,14 @@ default opened_door = False
 
 - 简单赋值用 `$` 单行，复杂逻辑用 `python:` 块。
 - 避免在 `init python:` 中做耗时操作，延迟到 `label start:` 按需加载。
+
+## 定义管理（definitions.rpy）
+
+所有全局定义集中在 `game/definitions.rpy`：
+
+- **角色定义**：所有 `define 角色 = Character(...)` 放在此文件。
+- **图像别名**：`image bg xxx = ...` 等。
+- **音频定义**：`define audio.bgm_xxx = ...` 等。
+- **存档变量**：所有 `default xxx = ...` 放在此文件。
+
+这样 `script.rpy` 只保留入口职责，各章节专注于剧情逻辑。
