@@ -1,5 +1,5 @@
 ## 图像定义
-image bg apartment_foyer = Transform("images/scene1.png", fit="cover")
+image bg apartment_foyer = Transform("images/bg/scene1.png", fit="cover")
 
 ## 角色定义
 define jim = Character("吉姆", kind = adv, ctc = "ctc")

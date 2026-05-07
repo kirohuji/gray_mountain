@@ -1,10 +1,10 @@
 # 图片卡片组件
 # 从右下侧滑出（高于对话框，带间距），停留后渐变消失
 # 用法:
-#   $ show_image_card("images/box.png")
-#   $ show_image_card("images/box.png", distance=200)            # 自定义滑入距离
-#   $ show_image_card("images/box.png", card_w=400, card_h=300)  # 自定义卡片尺寸
-#   show screen show_card("images/box.png")
+#   $ show_image_card("images/cg/box.png")
+#   $ show_image_card("images/cg/box.png", distance=200)            # 自定义滑入距离
+#   $ show_image_card("images/cg/box.png", card_w=400, card_h=300)  # 自定义卡片尺寸
+#   show screen show_card("images/cg/box.png")
 
 ## 配置常量
 define IMAGE_CARD_SLIDE_DISTANCE = 500    # 从右边缘向左滑入的像素距离

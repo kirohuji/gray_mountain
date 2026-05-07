@@ -16,7 +16,7 @@ label sc01_foyer:
 
     "哈里斯大道的公寓和你离开时一模一样。窄长的棕色石砖公寓——波士顿最常见的那种——门廊窄，天花板却意外地高。"
 
-    $ show_image_card("images/box1.png")
+    $ show_image_card("images/cg/box1.png")
 
     "吉姆帮你开了门，把行李靠墙放在鞋柜旁。衣帽架上挂着你那件旧风衣，雨伞桶里斜插着一把黑伞。他站在门口，没有进来。"
     
@@ -55,7 +55,7 @@ label sc01_foyer_bag:
 
     "袋子的侧面有一层灰白色的粉末。你用拇指抹了一下——很细，滑腻。不像普通的灰尘，倒更像是……石粉。"
 
-    $ show_image_card("images/box.png")
+    $ show_image_card("images/cg/box.png")
 
     "你打开袋口。里面是你的几件换洗衣物，叠得不整齐——不是你的叠法。是别人帮你收拾的。"
 
