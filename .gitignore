@@ -1,4 +1,4 @@
-.vscode/
+.vscode/settings.json
 log.txt
 traceback.txt
 /game/cache/
@@ -6,10 +6,6 @@ traceback.txt
 /game/log.txt
 /game/traceback.txt
 /game/errors.txt
-/game/*.rpyc
-/game/*.rpymc
-/game/*.rpa
-/game/*.rpy
 /game/*.rpyc
 /game/*.rpymc
 /game/*.rpa

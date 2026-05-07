@@ -16,11 +16,11 @@ While running game code:
   File "game/scripts/image_card.rpy", line 55, in execute
     frame:
   File "game/scripts/image_card.rpy", line 62, in execute
-    add Transform(img, width=card_w, height=card_h, fit="contain")
+    add Transform(im.Load(img), xsize=card_w, ysize=card_h, fit="contain")
   File "game/scripts/image_card.rpy", line 62, in <module>
-    add Transform(img, width=card_w, height=card_h, fit="contain")
-        ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Unknown transform property: 'width'
+    add Transform(im.Load(img), xsize=card_w, ysize=card_h, fit="contain")
+                  ^^^^^^^                                                 
+AttributeError: module 'renpy.display.im' has no attribute 'Load'
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -86,7 +86,7 @@ Traceback (most recent call last):
   File "game/scripts/image_card.rpy", line 55, in execute
     frame:
   File "game/scripts/image_card.rpy", line 62, in execute
-    add Transform(img, width=card_w, height=card_h, fit="contain")
+    add Transform(im.Load(img), xsize=card_w, ysize=card_h, fit="contain")
   File "renpy/python.py", line 1305, in py_eval
     return py_eval_bytecode(code, globals, locals)
            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
@@ -94,13 +94,11 @@ Traceback (most recent call last):
     return eval(bytecode, globals, locals)
            ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "game/scripts/image_card.rpy", line 62, in <module>
-    add Transform(img, width=card_w, height=card_h, fit="contain")
-        ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/transform.py", line 772, in __init__
-    raise Exception("Unknown transform property: %r" % k)
-Exception: Unknown transform property: 'width'
+    add Transform(im.Load(img), xsize=card_w, ysize=card_h, fit="contain")
+                  ^^^^^^^                                                 
+AttributeError: module 'renpy.display.im' has no attribute 'Load'
 
-Windows-11-10.0.26200-SP0 AMD64
+macOS-26.3.1-x86_64-i386-64bit x86_64
 Ren'Py 8.5.2.26010301
 black_white_horror_ui 1.0
-Wed May  6 18:30:42 2026
+Wed May  6 20:30:44 2026
