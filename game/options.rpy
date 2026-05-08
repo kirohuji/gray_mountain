@@ -16,6 +16,10 @@ define config.name = _("black_white_horror_ui")
 
 define config.developer = True
 
+## 性能优化
+define config.image_cache_size = 8                     # 减少 GPU 纹理缓存占用
+define config.predict_screen_statements = False        # 开发阶段关闭屏幕预测，降低 CPU/GPU 负载
+
 
 ## Determines if the title given above is shown on the main menu screen. Set
 ## this to False to hide the title.

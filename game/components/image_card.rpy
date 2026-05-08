@@ -17,7 +17,6 @@ define IMAGE_CARD_DEFAULT_HEIGHT = 300    # 卡片默认高度
 
 
 transform card_slidein(distance=IMAGE_CARD_SLIDE_DISTANCE):
-    subpixel True
 
     # 以卡片底部为锚点，定位在对话框上方
     yanchor 1.0

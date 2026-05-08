@@ -53,27 +53,35 @@ screen room_explore():
     else:
         add "#1a1a1a"
 
-    # ---- 顶部：任务提示栏 ----
+    # ---- 顶部：房间信息栏 ----
     frame:
         xalign 0.5
         yalign 0.0
         xsize 900
-        ysize 60
         background "#000000cc"
-        padding (20, 5)
+        padding (20, 10)
 
-        hbox:
+        vbox:
             xalign 0.5
-            spacing 15
+            spacing 4
 
-            if store.quest.get_stage_hint():
-                text "▶ [store.quest.get_stage_hint()]":
-                    color "#cccccc"
-                    size 24
+            if room_data:
+                text room_data["name"]:
+                    size 30
+                    color "#ffffff"
                     font gui.text_font
+                    xalign 0.5
 
-    # ---- 右上角：房间信息卡片 ----
-    use room_info_card
+                $ desc = store.nav.get_room_description(current_room)
+                if desc:
+                    text desc:
+                        size 20
+                        color "#999999"
+                        font gui.text_font
+                        xalign 0.5
+
+    # ---- 右上角：任务提示卡片 ----
+    use quest_hint_card
 
     # ---- 右侧：调查活动列表 ----
     python:

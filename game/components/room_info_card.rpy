@@ -1,54 +1,52 @@
 # ============================================================
-# 房间信息卡片组件 — 右上角滑入，显示当前房间名称与描述
+# 任务提示卡片组件 — 右上角滑入，显示当前任务阶段提示
 # 用法:
-#   use room_info_card
+#   use quest_hint_card
 # ============================================================
 
 ## 配置常量
-define ROOM_CARD_WIDTH = 400
-define ROOM_CARD_HEIGHT = 200
-define ROOM_CARD_TOP_MARGIN = 60      # 距顶部的间距
-define ROOM_CARD_SLIDE_TIME = 0.5     # 滑入动画时长
+define QUEST_CARD_WIDTH = 400
+define QUEST_CARD_HEIGHT = 200
+define QUEST_CARD_TOP_MARGIN = 60       # 距顶部的间距
+define QUEST_CARD_SLIDE_TIME = 0.5      # 滑入动画时长
 
 
-transform room_card_slidein:
-    subpixel True
-
+transform quest_card_slidein:
     # 以右上角为锚点
     xanchor 1.0
     yanchor 0.0
 
     # 起始：卡片完全在屏幕右侧外
-    xpos config.screen_width + ROOM_CARD_WIDTH
-    ypos ROOM_CARD_TOP_MARGIN
+    xpos config.screen_width + QUEST_CARD_WIDTH
+    ypos QUEST_CARD_TOP_MARGIN
 
     # 滑入：右侧贴紧屏幕右边
-    easein ROOM_CARD_SLIDE_TIME xpos config.screen_width
+    easein QUEST_CARD_SLIDE_TIME xpos config.screen_width
 
 
-screen room_info_card():
+screen quest_hint_card():
     zorder 90
 
-    default room_data = store.nav.get_current_room()
+    default hint = store.quest.get_stage_hint()
 
-    frame:
-        at room_card_slidein
+    if hint:
+        frame:
+            at quest_card_slidein
 
-        xsize ROOM_CARD_WIDTH
-        ysize ROOM_CARD_HEIGHT
-        background "#000000"
-        padding (20, 20)
+            xsize QUEST_CARD_WIDTH
+            ysize QUEST_CARD_HEIGHT
+            background "#000000"
+            padding (20, 20)
 
-        vbox:
-            spacing 10
+            vbox:
+                spacing 10
 
-            if room_data:
-                text room_data["name"]:
+                text "任务":
                     size 30
                     color "#ffffff"
                     font gui.text_font
 
-                text store.nav.get_room_description():
-                    size 20
-                    color "#888888"
+                text hint:
+                    size 22
+                    color "#cccccc"
                     font gui.text_font
