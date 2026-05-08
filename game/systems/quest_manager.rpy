@@ -6,7 +6,6 @@
 
 init python:
     import json
-    import os
 
     class QuestManager:
         """任务阶段管理器"""
@@ -21,11 +20,8 @@ init python:
             if self._loaded:
                 return
 
-            data_dir = os.path.join(config.gamedir, "data")
-            quests_path = os.path.join(data_dir, "quests.json")
-
             try:
-                with renpy.loader.load(quests_path) as f:
+                with renpy.file("data/quests.json") as f:
                     data = json.load(f)
                 self.quests = data.get("quests", {})
                 self._loaded = True

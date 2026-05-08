@@ -6,7 +6,6 @@
 
 init python:
     import json
-    import os
 
     class InventoryManager:
         """线索背包管理器"""
@@ -20,11 +19,8 @@ init python:
             if self._loaded:
                 return
 
-            data_dir = os.path.join(config.gamedir, "data")
-            items_path = os.path.join(data_dir, "items.json")
-
             try:
-                with renpy.loader.load(items_path) as f:
+                with renpy.file("data/items.json") as f:
                     data = json.load(f)
                 self.items = data.get("items", {})
                 self._loaded = True

@@ -4,26 +4,21 @@
 
 init python:
     import json
-    import os
 
     _cached_activities = None
 
     def _load_activities_data():
-        """加载 activities.json 数据（带缓存）"""
         global _cached_activities
         if _cached_activities is not None:
             return _cached_activities
-        data_dir = os.path.join(config.gamedir, "data")
-        path = os.path.join(data_dir, "activities.json")
         try:
-            with renpy.loader.load(path) as f:
+            with renpy.file("data/activities.json") as f:
                 _cached_activities = json.load(f).get("activities", {})
         except Exception:
             _cached_activities = {}
         return _cached_activities
 
     def get_available_activities(room_id):
-        """获取当前房间可进行的所有活动"""
         all_activities = _load_activities_data()
         available = []
         for act_id, act in all_activities.items():
@@ -36,12 +31,10 @@ init python:
         return available
 
     def get_room_name(room_id):
-        """获取房间中文名"""
         room = store.nav.get_room(room_id)
         return room["name"] if room else room_id
 
     def get_room_connections(room_id):
-        """获取当前房间可移动到的目标房间列表"""
         room = store.nav.get_room(room_id)
         if not room:
             return []
@@ -49,7 +42,6 @@ init python:
 
 
 screen room_explore():
-    """房间探索主界面"""
     zorder 0
 
     default current_room = store.nav.current_room

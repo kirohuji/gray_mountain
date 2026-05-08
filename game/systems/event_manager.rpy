@@ -5,10 +5,8 @@
 
 init python:
     import json
-    import os
 
     class EventManager:
-        """事件管理器 — 根据条件评估并触发事件"""
 
         def __init__(self):
             self.events = []      # 所有事件定义列表
@@ -17,15 +15,11 @@ init python:
         # ---- 加载 ----
 
         def load(self):
-            """从 events.json 加载事件数据"""
             if self._loaded:
                 return
 
-            data_dir = os.path.join(config.gamedir, "data")
-            events_path = os.path.join(data_dir, "events.json")
-
             try:
-                with renpy.loader.load(events_path) as f:
+                with renpy.file("data/events.json") as f:
                     data = json.load(f)
                 # 转换为 list 方便遍历
                 self.events = list(data.get("events", {}).values())
@@ -36,7 +30,6 @@ init python:
         # ---- 条件评估 ----
 
         def _check_condition(self, condition, event_id=""):
-            """评估单个条件块"""
             for key, value in condition.items():
                 if key == "room":
                     if store.nav.current_room != value:
@@ -85,7 +78,6 @@ init python:
         # ---- 动作执行 ----
 
         def _execute_action(self, action):
-            """执行事件动作"""
             atype = action.get("type", "")
 
             if atype == "set_room_description":
@@ -121,7 +113,6 @@ init python:
         # ---- 公开接口 ----
 
         def check_enter_room(self, room_id):
-            """进入房间时检查事件"""
             results = []
             for event in self.events:
                 if event.get("trigger") != "enter_room":
@@ -135,7 +126,6 @@ init python:
             return results
 
         def check_after_activity(self, activity_id):
-            """完成活动后检查事件"""
             results = []
             for event in self.events:
                 if event.get("trigger") != "after_activity":
@@ -149,7 +139,6 @@ init python:
             return results
 
         def check_periodic(self):
-            """周期性事件检查（每次进房间后调用）"""
             results = []
             for event in self.events:
                 if event.get("trigger") != "periodic":
@@ -161,7 +150,6 @@ init python:
             return results
 
         def check_narrative_stage(self):
-            """检查当前任务阶段是否需要触发叙事"""
             if store.quest.is_narrative_stage():
                 stage = store.quest.get_current_stage()
                 if stage:

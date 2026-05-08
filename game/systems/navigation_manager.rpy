@@ -6,7 +6,6 @@
 
 init python:
     import json
-    import os
 
     class NavigationManager:
         """房间导航管理器"""
@@ -20,11 +19,8 @@ init python:
             if self._loaded:
                 return
 
-            data_dir = os.path.join(config.gamedir, "data")
-            rooms_path = os.path.join(data_dir, "rooms.json")
-
             try:
-                with renpy.loader.load(rooms_path) as f:
+                with renpy.file("data/rooms.json") as f:
                     data = json.load(f)
                 self.rooms = data.get("rooms", {})
                 self._loaded = True
