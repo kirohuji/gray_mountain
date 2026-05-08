@@ -72,28 +72,8 @@ screen room_explore():
                     size 24
                     font gui.text_font
 
-    # ---- 底部：房间描述 ----
-    frame:
-        xalign 0.5
-        yalign 1.0
-        xsize 1100
-        ysize 160
-        background "#000000dd"
-        padding (30, 20)
-
-        vbox:
-            spacing 5
-
-            if room_data:
-                text "[room_data['name']]":
-                    size 36
-                    color "#ffffff"
-                    font gui.text_font
-
-                text store.nav.get_room_description(current_room):
-                    size 24
-                    color "#999999"
-                    font gui.text_font
+    # ---- 右上角：房间信息卡片 ----
+    use room_info_card
 
     # ---- 右侧：调查活动列表 ----
     python:
