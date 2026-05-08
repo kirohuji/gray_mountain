@@ -1,0 +1,36 @@
+{
+    "items": {
+        "medicine_bottle": {
+            "id": "medicine_bottle",
+            "name": "药瓶",
+            "description": "哈丁医生开的药。每晚一片。白色的小药片，没有任何标记。",
+            "icon": "images/ui/items/medicine_bottle.png",
+            "type": "clue",
+            "chapter": 1
+        },
+        "sketchbook": {
+            "id": "sketchbook",
+            "name": "速写本",
+            "description": "艾琳娜的速写本。翻到五渔村的那一页——炭笔线条已经模糊了。那是你最喜欢的画。",
+            "icon": "images/ui/items/sketchbook.png",
+            "type": "clue",
+            "chapter": 1
+        },
+        "hairpin": {
+            "id": "hairpin",
+            "name": "发夹",
+            "description": "艾琳娜的发夹。在卧室地毯上找到的。银色的，有些旧了。",
+            "icon": "images/ui/items/hairpin.png",
+            "type": "clue",
+            "chapter": 1
+        },
+        "medical_record": {
+            "id": "medical_record",
+            "name": "病历",
+            "description": "哈丁医生的诊断记录。上面写着一些你看不太懂的术语，但结尾的诊断意见很清楚。",
+            "icon": "images/ui/items/medical_record.png",
+            "type": "clue",
+            "chapter": 2
+        }
+    }
+}

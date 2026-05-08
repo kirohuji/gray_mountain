@@ -1,0 +1,79 @@
+{
+    "rooms": {
+        "foyer": {
+            "id": "foyer",
+            "name": "玄关",
+            "background": "bg_apartment_foyer",
+            "connections": ["livingroom"],
+            "time_descriptions": {
+                "evening": "你站在玄关。门锁咔嗒声的余韵还在耳边。鞋柜旁的行李袋靠墙立着，答录机的红灯一闪一闪。客厅在前方，走廊通向卧室的方向。",
+                "night": "玄关沉在昏暗里。月光从门缝和窗帘的边缘渗进来，在地板上画出一道银灰色的细线。",
+                "late_night": "玄关的黑暗像凝固的水。你几乎能摸到它的质感。",
+                "dawn": "晨光从门缝透进来——灰蓝色的，薄的，不像新的一天，倒像是旧的一天的褪色副本。"
+            },
+            "default_description": "你站在玄关。门锁咔嗒声的余韵还在耳边。鞋柜旁的行李袋靠墙立着，答录机的红灯一闪一闪。客厅在前方，走廊通向卧室的方向。",
+            "atmosphere": "寂静中带着轻微的电流声——是答录机的待机声。空气里有久未通风的沉闷。",
+            "activities": []
+        },
+        "livingroom": {
+            "id": "livingroom",
+            "name": "客厅",
+            "background": "bg_apartment_livingroom_evening",
+            "connections": ["foyer", "corridor"],
+            "time_descriptions": {
+                "evening": "客厅的窗帘拉着。沙发靠墙，茶几上放着一个小小的白色药瓶。空气里有久未通风的沉闷——不是灰尘的气味，是封闭的空间自己产生的气味。",
+                "night": "客厅暗了许多。窗外的街灯透过窗帘，在墙壁上投下模糊的橙色光斑。沙发的轮廓像一个人蜷缩着。",
+                "late_night": "客厅几乎完全黑了。只有窗帘缝隙里漏进来的街灯光。沙发的皮革在暗中发出细微的咯吱声——也许是温度变化。也许是别的。",
+                "dawn": "晨光从窗帘边缘溢进来，把茶几上的药瓶照成一个小小的白色光点。"
+            },
+            "default_description": "客厅的窗帘拉着。沙发靠墙，茶几上放着一个小小的白色药瓶。空气里有久未通风的沉闷。",
+            "atmosphere": "沉滞的空气。沙发上的布料留着上一个坐过的人的折痕。",
+            "activities": []
+        },
+        "corridor": {
+            "id": "corridor",
+            "name": "走廊",
+            "background": "bg_apartment_corridor_night",
+            "connections": ["livingroom", "bedroom", "studio"],
+            "time_descriptions": {
+                "evening": "走廊窄而暗。墙上挂着一幅小幅的炭笔素描——艾琳娜画的。电话机挂在尽头墙上，听筒上有一层薄灰。",
+                "night": "走廊的灯光坏了。你借着客厅的光看路。炭笔素描在暗中只是一个模糊的方形。电话机的轮廓像一只蹲伏的鸟。",
+                "late_night": "走廊在黑暗中延伸到看不清楚。你听到空气在管道里流动的声音——或者像是某种微弱的呼吸声。",
+                "dawn": "走廊浸在淡蓝色的晨光里。电话机上的灰尘颗粒悬浮在空气中，像静止的雪。"
+            },
+            "default_description": "走廊窄而暗。墙上挂着一幅小幅的炭笔素描。电话机挂在尽头墙上。",
+            "atmosphere": "狭窄的空间放大了声音——地板嘎吱声、衣物摩擦声、自己的心跳声。",
+            "activities": []
+        },
+        "bedroom": {
+            "id": "bedroom",
+            "name": "卧室",
+            "background": "bg_apartment_bedroom_night",
+            "connections": ["corridor"],
+            "time_descriptions": {
+                "evening": "卧室的窗帘半开着。窗外是波士顿灰蓝色的傍晚天空。床铺得整整齐齐——她不在的时候一直是这样。床头柜上摊着速写本，翻到某一页。",
+                "night": "卧室被窗外的街灯照亮，光线从百叶窗的缝隙切进来，在地板上画出一排平行的灰色线条。床头柜上，速写本摊开着，纸页微微翘起。",
+                "late_night": "卧室几乎全黑了。窗外的街灯在飘雪中闪烁不定。你看到床边有一团模糊的轮廓。",
+                "dawn": "晨光从窗户涌入，把整个卧室洗成灰白色。速写本被风吹翻了几页——还是风吹的？"
+            },
+            "default_description": "卧室的窗帘半开着。床铺得整整齐齐。床头柜上摊着速写本。",
+            "atmosphere": "这个房间比别的房间更冷一些。不是温度——是某种更深处的冷。",
+            "activities": []
+        },
+        "studio": {
+            "id": "studio",
+            "name": "画室",
+            "background": "bg_apartment_studio_evening",
+            "connections": ["corridor"],
+            "time_descriptions": {
+                "evening": "画室朝北。窗外是灰白色的天空。画架立在窗边，画布上什么都没有——一片空白。颜料管整齐地排列在桌上，变硬了的画笔插在笔筒里。",
+                "night": "画室在暗中是一个维度错乱的空间。画架像一具骨骼。颜料管和画笔在不经意间反射着微弱的光——像动物的眼睛。",
+                "late_night": "画室的黑暗似乎有厚度。你感觉有什么东西在画布之前站过——之前不久。",
+                "dawn": "画室被晨光照亮了一半。画架在光里，颜料管在影里。空白的画布上，你看到了一些以前没有注意到的纹理——画布本身的纹理，或者是什么东西在上面画过的痕迹。"
+            },
+            "default_description": "画室朝北。画架立在窗边，画布上什么都没有——一片空白。颜料管整齐排列在桌上。",
+            "atmosphere": "颜料和松节油混合的气味，淡得像一个记忆。这间房间的空气似乎比别处更稀薄。",
+            "activities": []
+        }
+    }
+}

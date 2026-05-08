@@ -1,0 +1,98 @@
+{
+    "quests": {
+        "ch01": {
+            "id": "ch01",
+            "chapter": 1,
+            "title": "归途",
+            "stages": {
+                "ch01_enter_home": {
+                    "id": "ch01_enter_home",
+                    "order": 0,
+                    "description": "吉姆刚走。你独自站在公寓里，疲惫沉在身体里。四处看看吧。",
+                    "hint": "探索玄关，看看周围的东西",
+                    "on_enter": {
+                        "set_room": "foyer",
+                        "show_hint": true
+                    },
+                    "completion": {
+                        "type": "activities_completed",
+                        "min_count": 2
+                    },
+                    "next_stage": "ch01_livingroom"
+                },
+                "ch01_livingroom": {
+                    "id": "ch01_livingroom",
+                    "order": 1,
+                    "description": "玄关看得差不多了。走廊通向客厅，也许该去那里歇一歇。",
+                    "hint": "进入客厅",
+                    "completion": {
+                        "type": "enter_room",
+                        "room": "livingroom"
+                    },
+                    "next_stage": "ch01_sleep"
+                },
+                "ch01_sleep": {
+                    "id": "ch01_sleep",
+                    "order": 2,
+                    "description": "客厅里，茶几上放着哈丁医生开的药。沙发看起来格外诱人——你太累了。",
+                    "hint": "坐到沙发上休息一下",
+                    "completion": {
+                        "type": "do_activity",
+                        "activity": "sit_sofa"
+                    },
+                    "next_stage": "ch01_phone_rings",
+                    "is_narrative_trigger": true
+                },
+                "ch01_phone_rings": {
+                    "id": "ch01_phone_rings",
+                    "order": 3,
+                    "description": "",
+                    "hint": "",
+                    "completion": {
+                        "type": "narrative",
+                        "jump": "sc03_phone_rings"
+                    },
+                    "next_stage": "ch01_phone_answered",
+                    "is_narrative_trigger": true
+                },
+                "ch01_phone_answered": {
+                    "id": "ch01_phone_answered",
+                    "order": 4,
+                    "description": "电话响了。你被惊醒。去接电话。",
+                    "hint": "穿过走廊，去接电话",
+                    "completion": {
+                        "type": "do_activity",
+                        "activity": "answer_phone"
+                    },
+                    "next_stage": "ch01_bedroom_elena",
+                    "is_narrative_trigger": true
+                },
+                "ch01_bedroom_elena": {
+                    "id": "ch01_bedroom_elena",
+                    "order": 5,
+                    "description": "",
+                    "hint": "",
+                    "completion": {
+                        "type": "narrative",
+                        "jump": "sc04_reunion"
+                    },
+                    "next_stage": "ch01_doorbell",
+                    "is_narrative_trigger": true
+                },
+                "ch01_doorbell": {
+                    "id": "ch01_doorbell",
+                    "order": 6,
+                    "description": "",
+                    "hint": "",
+                    "completion": {
+                        "type": "narrative",
+                        "jump": "sc05_doorbell"
+                    },
+                    "next_stage": null,
+                    "is_narrative_trigger": true
+                }
+            },
+            "initial_stage": "ch01_enter_home"
+        }
+    }
+}

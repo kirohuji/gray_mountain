@@ -1,0 +1,101 @@
+{
+    "events": {
+        "foyer_on_enter": {
+            "id": "foyer_on_enter",
+            "trigger": "enter_room",
+            "room": "foyer",
+            "conditions": {
+                "quest_stage": "ch01_enter_home"
+            },
+            "action": {
+                "type": "set_room_description",
+                "variant": "evening"
+            }
+        },
+        "livingroom_on_enter": {
+            "id": "livingroom_on_enter",
+            "trigger": "enter_room",
+            "room": "livingroom",
+            "conditions": {
+                "quest_stage": "ch01_livingroom"
+            },
+            "action": {
+                "type": "advance_quest",
+                "stage": "ch01_livingroom"
+            }
+        },
+        "after_sleep_narrative": {
+            "id": "after_sleep_narrative",
+            "trigger": "after_activity",
+            "activity": "sit_sofa",
+            "conditions": {
+                "quest_stage": "ch01_sleep"
+            },
+            "action": {
+                "type": "advance_quest",
+                "stage": "ch01_phone_rings"
+            }
+        },
+        "after_phone_answer": {
+            "id": "after_phone_answer",
+            "trigger": "after_activity",
+            "activity": "answer_phone",
+            "conditions": {
+                "quest_stage": "ch01_phone_answered"
+            },
+            "action": {
+                "type": "advance_quest",
+                "stage": "ch01_bedroom_elena"
+            }
+        },
+        "bedroom_smell_check": {
+            "id": "bedroom_smell_check",
+            "trigger": "enter_room",
+            "room": "bedroom",
+            "conditions": {
+                "quest_stage": ["ch01_enter_home", "ch01_livingroom"]
+            },
+            "action": {
+                "type": "show_message",
+                "text": "你站在卧室门口，没有进去。空气里有一丝极淡的——香味。她以前用的那种洗衣液的味道。但你知道她已经很久没有用过了。"
+            }
+        },
+        "studio_door_locked": {
+            "id": "studio_door_locked",
+            "trigger": "enter_room",
+            "room": "studio",
+            "conditions": {
+                "not_flag": "studio_unlocked"
+            },
+            "action": {
+                "type": "show_message",
+                "text": "画室的门是锁着的。你试了试门把手——纹丝不动。也许钥匙在别处。"
+            }
+        },
+        "foyer_anomaly_trigger": {
+            "id": "foyer_anomaly_trigger",
+            "trigger": "after_activity",
+            "room": "foyer",
+            "conditions": {
+                "flag": "examined_bag",
+                "flag": "heard_voicemail"
+            },
+            "action": {
+                "type": "increment_anomaly",
+                "amount": 1
+            }
+        },
+        "late_night_atmosphere": {
+            "id": "late_night_atmosphere",
+            "trigger": "periodic",
+            "interval": "every_room_enter",
+            "conditions": {
+                "time_slot": "late_night"
+            },
+            "action": {
+                "type": "show_message",
+                "text": "夜更深了。墙似乎在呼吸——膨胀，收缩，再膨胀。你没有看墙。你没有。"
+            }
+        }
+    }
+}

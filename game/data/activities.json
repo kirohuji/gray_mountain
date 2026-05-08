@@ -1,0 +1,148 @@
+{
+    "activities": {
+        "examine_bag": {
+            "id": "examine_bag",
+            "name": "查看行李袋",
+            "room": "foyer",
+            "type": "examine",
+            "once": true,
+            "flag": "examined_bag",
+            "description": "深灰色的帆布袋靠在鞋柜侧面。不是平时出门用的那一只——这是疗养院的物品，侧面贴着一张白色标签，上面用墨水写着你的名字：卡特，汤姆。\n\n袋子的侧面有一层灰白色的粉末。你用拇指抹了一下——很细，滑腻。不像普通的灰尘，倒更像是……石粉。\n\n你打开袋口。里面是你的几件换洗衣物，叠得不整齐——不是你的叠法。是别人帮你收拾的。你不想去回忆是谁。",
+            "narrative": {
+                "jump": "act_examine_bag"
+            }
+        },
+        "examine_phone": {
+            "id": "examine_phone",
+            "name": "查看电话答录机",
+            "room": "foyer",
+            "type": "examine",
+            "once": true,
+            "flag": "heard_voicemail",
+            "description": "玄关柜上的电话答录机。红灯正在闪烁——有未读留言。",
+            "narrative": {
+                "jump": "act_examine_phone"
+            }
+        },
+        "examine_shoes": {
+            "id": "examine_shoes",
+            "name": "查看鞋柜",
+            "room": "foyer",
+            "type": "examine",
+            "once": true,
+            "flag": "examined_shoes",
+            "description": "老旧的橡木鞋柜。你的鞋整齐排列在底层。她的鞋在最顶层——三双。",
+            "narrative": {
+                "jump": "act_examine_shoes"
+            }
+        },
+        "examine_mirror": {
+            "id": "examine_mirror",
+            "name": "看镜子",
+            "room": "foyer",
+            "type": "examine",
+            "once": true,
+            "flag": "touched_mirror",
+            "description": "门边的穿衣镜。你无意中瞥了一眼。镜子里的你——比上次照镜子时瘦了很多。",
+            "narrative": {
+                "jump": "act_examine_mirror"
+            }
+        },
+        "examine_medicine": {
+            "id": "examine_medicine",
+            "name": "查看药瓶",
+            "room": "livingroom",
+            "type": "examine",
+            "once": true,
+            "flag": "examined_medicine",
+            "description": "茶几上的白色小药瓶。标签上写着：卡特，汤姆。每晚一片，睡前服用。哈丁医生。\n\n你拧开瓶盖。药片是白色的，圆的，没有任何标记。闻起来没有味道。",
+            "narrative": {
+                "jump": "act_examine_medicine"
+            }
+        },
+        "sit_sofa": {
+            "id": "sit_sofa",
+            "name": "坐到沙发上",
+            "room": "livingroom",
+            "type": "action",
+            "once": true,
+            "flag": "sat_on_sofa",
+            "description": "沙发看起来格外柔软。你太久没有好好睡一觉了。",
+            "narrative": {
+                "jump": "sc02_sleep"
+            }
+        },
+        "examine_sketch_corridor": {
+            "id": "examine_sketch_corridor",
+            "name": "看墙上的画",
+            "room": "corridor",
+            "type": "examine",
+            "once": true,
+            "flag": "examined_corridor_sketch",
+            "description": "炭笔素描——艾琳娜画的。画的是五渔村的悬崖和小巷。左下角有她的签名，日期是三年前。",
+            "narrative": {
+                "jump": "act_examine_corridor_sketch"
+            }
+        },
+        "answer_phone": {
+            "id": "answer_phone",
+            "name": "接电话",
+            "room": "corridor",
+            "type": "action",
+            "once": true,
+            "flag": "answered_phone",
+            "description": "电话还在响。你拿起听筒。",
+            "narrative": {
+                "jump": "sc03_phone_answer"
+            }
+        },
+        "examine_sketchbook": {
+            "id": "examine_sketchbook",
+            "name": "看速写本",
+            "room": "bedroom",
+            "type": "examine",
+            "once": false,
+            "flag": "examined_sketchbook",
+            "description": "床头柜上摊开的速写本。翻到的那一页，是艾琳娜在五渔村的速写。你最喜欢的画。纸面泛黄，炭笔线条模糊了。",
+            "narrative": {
+                "jump": "act_examine_sketchbook"
+            }
+        },
+        "examine_easel": {
+            "id": "examine_easel",
+            "name": "看画架",
+            "room": "studio",
+            "type": "examine",
+            "once": false,
+            "flag": "examined_easel",
+            "description": "画架立在窗边。画布上一片空白。但如果你凑近了看——在特定的光线角度下——画布上有一些极淡的铅笔线条。像是一幅没有完成的构图。",
+            "narrative": {
+                "jump": "act_examine_easel"
+            }
+        },
+        "examine_paints": {
+            "id": "examine_paints",
+            "name": "看颜料管",
+            "room": "studio",
+            "type": "examine",
+            "once": true,
+            "flag": "examined_paints",
+            "description": "颜料管整齐地排列在桌上。有些已经变硬了——盖子没拧紧。在变硬的颜料管旁边，有一管灰色颜料是新的，盖子拧得很紧。标签上写着：Payne's Gray。\n\n这种灰色——介于蓝黑之间的沉重的灰——你以前不常用。",
+            "narrative": {
+                "jump": "act_examine_paints"
+            }
+        },
+        "examine_window_bedroom": {
+            "id": "examine_window_bedroom",
+            "name": "看窗外",
+            "room": "bedroom",
+            "type": "examine",
+            "once": false,
+            "flag": "looked_out_window",
+            "description": "窗外是波士顿的夜。路灯下开始飘雪——细小的、安静的雪。",
+            "narrative": {
+                "jump": "act_look_out_window"
+            }
+        }
+    }
+}
