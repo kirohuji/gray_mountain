@@ -141,10 +141,10 @@ style game_menu_label_text:
     size 65
 
 style game_menu_label:
-    xalign 0.18
+    xanchor 0.0
+    xpos 0.18
     xsize 1300
     yalign 0.05
-    xanchor 0.0
     ysize 90
     top_padding 40
     bottom_padding 10

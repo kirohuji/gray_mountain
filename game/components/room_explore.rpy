@@ -114,7 +114,6 @@ screen room_explore():
             xsize 260
             background "#000000bb"
             padding (15, 15)
-            yanchor 0.5
 
             vbox:
                 spacing 8

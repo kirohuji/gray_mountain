@@ -1,10 +1,10 @@
 ## 图像定义
-image bg_apartment_foyer = Transform("images/bg/scene1.png", fit="cover")
+image bg_apartment_foyer = Transform("images/bg/apartment_foyer.png", fit="cover")
 
 # 占位背景——后续替换为实际背景图
-image bg_apartment_livingroom_evening = Transform("images/bg/scene1.png", fit="cover")
+image bg_apartment_livingroom_evening = Transform("images/bg/apartment_livingroom.png", fit="cover")
 image bg_apartment_corridor_night = Transform("images/bg/scene1.png", fit="cover")
-image bg_apartment_bedroom_night = Transform("images/bg/scene1.png", fit="cover")
+image bg_apartment_bedroom_night = Transform("images/bg/apartment_bedroom.png", fit="cover")
 image bg_apartment_studio_evening = Transform("images/bg/scene1.png", fit="cover")
 
 ## 角色定义
