@@ -1,22 +1,29 @@
 ## 图像定义
-image bg apartment_foyer = Transform("images/bg/scene1.png", fit="cover")
+image bg_apartment_foyer = Transform("images/bg/scene1.png", fit="cover")
+
+# 占位背景——后续替换为实际背景图
+image bg_apartment_livingroom_evening = Transform("images/bg/scene1.png", fit="cover")
+image bg_apartment_corridor_night = Transform("images/bg/scene1.png", fit="cover")
+image bg_apartment_bedroom_night = Transform("images/bg/scene1.png", fit="cover")
+image bg_apartment_studio_evening = Transform("images/bg/scene1.png", fit="cover")
 
 ## 角色定义
 define jim = Character("吉姆", kind = adv, ctc = "ctc")
 define elena = Character("艾琳娜", kind = adv, ctc = "ctc")
 define narrator = Character(kind = adv, ctc = "ctc", what_xalign = 0.5, what_italic = True, what_size = 30)
 
-## 存档变量（default 声明）
-default flags = {}
-default current_room = "foyer"
-default quest_stage = "ch01_enter_home"
-default time_slot = "evening"
-default reality = 100
-default anomaly_count = 0
-default examined_items = []
-default completed_activities = {}
-default inventory_items = []
-default chapter_completed = {}
+## 存档数据——所有游戏状态集中在此 dict，Ren'Py 自动保存/加载
+default _save = {
+    "flags": {},
+    "reality": 100,
+    "time_slot": "evening",
+    "anomaly_count": 0,
+    "current_room": "foyer",
+    "quest_stage": None,
+    "examined_items": [],
+    "completed_activities": {},
+    "inventory": [],
+}
 
 # ---- 系统管理器 store 别名（init 999 确保在所有系统文件加载后执行）----
 init 999 python:

@@ -1,6 +1,7 @@
 # ============================================================
 # NavigationManager — 房间移动系统
 # 负责加载房间数据、管理当前房间、提供移动功能
+# 当前房间 ID 存储于 store._save["current_room"]
 # ============================================================
 
 init python:
@@ -12,7 +13,6 @@ init python:
 
         def __init__(self):
             self.rooms = {}
-            self.current_room = None
             self._loaded = False
 
         def load(self):
@@ -31,6 +31,18 @@ init python:
             except Exception as e:
                 renpy.notify("无法加载 rooms.json: {}".format(e))
 
+        # ---- 当前房间 ----
+
+        @property
+        def current_room(self):
+            return store._save["current_room"]
+
+        @current_room.setter
+        def current_room(self, value):
+            store._save["current_room"] = value
+
+        # ---- 房间查询 ----
+
         def get_current_room(self):
             """获取当前房间数据"""
             if self.current_room and self.current_room in self.rooms:
@@ -41,17 +53,17 @@ init python:
             """获取指定房间数据"""
             return self.rooms.get(room_id, None)
 
+        # ---- 移动 ----
+
         def move_to(self, room_id):
             """移动到指定房间"""
             if room_id not in self.rooms:
                 return False, "房间不存在"
 
-            # 已经在目标房间，无需移动
             if self.current_room == room_id:
                 return True, self.rooms[room_id]
 
             room = self.rooms[room_id]
-            # 检查连接关系
             if self.current_room is not None:
                 current = self.get_current_room()
                 if current and room_id not in current.get("connections", []):
@@ -85,6 +97,8 @@ init python:
                 return current.get("connections", [])
             return []
 
+        # ---- 描述 ----
+
         def get_room_description(self, room_id=None):
             """获取房间描述（支持时间变体）"""
             rid = room_id or self.current_room
@@ -92,7 +106,6 @@ init python:
             if not room:
                 return ""
 
-            # 优先时间变体
             time_slot = store.state.get_time()
             time_desc = room.get("time_descriptions", {}).get(time_slot)
             if time_desc:
@@ -108,10 +121,4 @@ init python:
                 return ""
             return room.get("atmosphere", "")
 
-        def set_current_room(self, room_id):
-            """直接设置当前房间（用于加载存档）"""
-            self.current_room = room_id
-
-
-    # 全局单例
     NavigationManager = NavigationManager()

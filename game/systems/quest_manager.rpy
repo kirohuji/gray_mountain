@@ -1,6 +1,7 @@
 # ============================================================
 # QuestManager — 任务/阶段管理系统
 # 负责加载任务数据、管理当前阶段、判断完成条件
+# 当前阶段存储于 store._save["quest_stage"]
 # ============================================================
 
 init python:
@@ -13,7 +14,6 @@ init python:
         def __init__(self):
             self.quests = {}
             self.current_quest = None
-            self.current_stage = None
             self._loaded = False
 
         def load(self):
@@ -31,6 +31,18 @@ init python:
                 self._loaded = True
             except Exception as e:
                 renpy.notify("无法加载 quests.json: {}".format(e))
+
+        # ---- 当前阶段 ----
+
+        @property
+        def current_stage(self):
+            return store._save["quest_stage"]
+
+        @current_stage.setter
+        def current_stage(self, value):
+            store._save["quest_stage"] = value
+
+        # ---- 任务操作 ----
 
         def start_quest(self, quest_id):
             """开始一个任务"""
@@ -56,7 +68,6 @@ init python:
             self.current_stage = stage_id
             stage = quest["stages"][stage_id]
 
-            # 触发 on_enter 逻辑
             on_enter = stage.get("on_enter", {})
             if on_enter.get("set_room"):
                 store.nav.set_initial_room(on_enter["set_room"])
@@ -90,6 +101,8 @@ init python:
                 return ""
             return stage.get("hint", "")
 
+        # ---- 完成检查 ----
+
         def check_stage_completion(self):
             """检查当前阶段是否完成"""
             stage = self.get_current_stage()
@@ -101,7 +114,7 @@ init python:
 
             if ctype == "activities_completed":
                 min_count = completion.get("min_count", 0)
-                exam_count = len(store.state.examined_items)
+                exam_count = len(store._save["examined_items"])
                 return exam_count >= min_count
 
             elif ctype == "enter_room":
@@ -110,10 +123,9 @@ init python:
 
             elif ctype == "do_activity":
                 target = completion.get("activity", "")
-                return store.state.is_activity_completed(target)
+                return store._save["completed_activities"].get(target, False)
 
             elif ctype == "narrative":
-                # 叙事类型由 label 中主动推进
                 return False
 
             return False
@@ -137,6 +149,4 @@ init python:
                 return False
             return stage.get("is_narrative_trigger", False)
 
-
-    # 全局单例
     QuestManager = QuestManager()
