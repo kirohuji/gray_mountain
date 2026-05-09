@@ -3,7 +3,7 @@
         "foyer": {
             "id": "foyer",
             "name": "玄关",
-            "background": "bg_apartment_foyer",
+            "background": "bg_apartment_foyer_evening",
             "connections": ["livingroom"],
             "time_descriptions": {
                 "evening": "你站在玄关。门锁咔嗒声的余韵还在耳边。鞋柜旁的行李袋靠墙立着，答录机的红灯一闪一闪。客厅在前方，走廊通向卧室的方向。",
@@ -33,7 +33,7 @@
         "corridor": {
             "id": "corridor",
             "name": "走廊",
-            "background": "bg_apartment_corridor_night",
+            "background": "bg_apartment_corridor_evening",
             "connections": ["livingroom", "bedroom", "studio"],
             "time_descriptions": {
                 "evening": "走廊窄而暗。墙上挂着一幅小幅的炭笔素描——艾琳娜画的。电话机挂在尽头墙上，听筒上有一层薄灰。",
@@ -48,7 +48,7 @@
         "bedroom": {
             "id": "bedroom",
             "name": "卧室",
-            "background": "bg_apartment_bedroom_night",
+            "background": "bg_apartment_bedroom_evening",
             "connections": ["corridor"],
             "time_descriptions": {
                 "evening": "卧室的窗帘半开着。窗外是波士顿灰蓝色的傍晚天空。床铺得整整齐齐——她不在的时候一直是这样。床头柜上摊着速写本，翻到某一页。",
