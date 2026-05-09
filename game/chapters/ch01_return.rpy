@@ -50,10 +50,19 @@ label explore_loop:
         if narrative_jump:
             renpy.jump(narrative_jump)
 
+    window hide
+
     # 显示探索界面
     show screen room_explore
 
-    "你站在[get_room_name(nav.current_room)]。你想做什么？"
+    python:
+        hint = quest.get_stage_hint()
+        last_hint = getattr(store, '_last_quest_hint', None)
+        if hint and hint != last_hint:
+            renpy.notify(hint)
+            store._last_quest_hint = hint
+
+    pause
 
     hide screen room_explore
     jump explore_loop
@@ -64,6 +73,9 @@ label explore_loop:
 # ============================================================
 
 label move_to_room:
+    # 先移除屏幕层（否则屏幕的背景图会覆盖 scene 的过渡）
+    hide screen room_explore
+
     python:
         dest = store._hovered_dest if hasattr(store, '_hovered_dest') and store._hovered_dest else "livingroom"
         success, result = nav.move_to(dest)

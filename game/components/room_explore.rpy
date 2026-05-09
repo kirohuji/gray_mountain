@@ -72,22 +72,20 @@ screen room_explore():
                     font gui.text_font
                     xalign 0.5
 
-                $ desc = store.nav.get_room_description(current_room)
-                if desc:
-                    text desc:
-                        size 20
-                        color "#999999"
-                        font gui.text_font
-                        xalign 0.5
+                # $ desc = store.nav.get_room_description(current_room)
+                # if desc:
+                #     text desc:
+                #         size 15
+                #         color "#999999"
+                #         font gui.text_font
+                #         xalign 0.5
 
-    # ---- 右上角：任务提示卡片 ----
-    use quest_hint_card
-
-    # ---- 右侧：调查活动列表 ----
+    # ---- 右侧面板：调查 + 导航 ----
     python:
         activities = get_available_activities(current_room)
+        connections = get_room_connections(current_room)
 
-    if activities:
+    if activities or connections:
         frame:
             xalign 1.0
             yalign 0.5
@@ -96,61 +94,44 @@ screen room_explore():
             padding (15, 15)
 
             vbox:
-                spacing 8
-
-                text "调查":
-                    size 28
-                    color "#ffffff"
-                    font gui.text_font
-                    xalign 0.0
-
-                for act in activities:
-                    $ act_id = act["id"]
-                    $ act_name = act["name"]
-                    textbutton act_name:
-                        xsize 230
-                        action Jump("handle_activity")
-                        hovered SetVariable("_hovered_activity", act_id)
-                        unhovered SetVariable("_hovered_activity", "")
-                        text_style "activity_button_text"
-
-    # ---- 底部：导航按钮 ----
-    python:
-        connections = get_room_connections(current_room)
-
-    if connections:
-        frame:
-            xalign 1.0
-            yalign 1.0
-            yoffset -180
-            xsize 200
-            background None
-            padding (10, 10)
-
-            vbox:
                 spacing 5
-                xalign 1.0
 
-                for rid, rname in connections:
-                    textbutton "→ [rname]":
-                        xsize 180
-                        action Jump("move_to_room")
-                        hovered SetVariable("_hovered_dest", rid)
-                        unhovered SetVariable("_hovered_dest", "")
-                        text_style "nav_button_text"
+                if activities:
+                    text "调查":
+                        size 28
+                        color "#ffffff"
+                        font gui.text_font
+                        xalign 0.0
+
+                    for act in activities:
+                        $ act_id = act["id"]
+                        $ act_name = act["name"]
+                        textbutton act_name:
+                            xsize 230
+                            action Jump("handle_activity")
+                            hovered SetVariable("_hovered_activity", act_id)
+                            unhovered SetVariable("_hovered_activity", "")
+                            text_style "panel_button_text"
+
+                if connections:
+                    if activities:
+                        text "":
+                            size 6
+
+                    for rid, rname in connections:
+                        textbutton "→ [rname]":
+                            xsize 230
+                            action Jump("move_to_room")
+                            hovered SetVariable("_hovered_dest", rid)
+                            unhovered SetVariable("_hovered_dest", "")
+                            text_style "panel_button_text"
 
     # 悬浮变量通过 SetVariable 自动写入 store 层级，此处无需 screen-local 默认值
 
 
 # 样式
-style activity_button_text:
+style panel_button_text:
     size 22
     color "#cccccc"
-    hover_color "#ffffff"
-    font gui.text_font
-
-style nav_button_text:
-    size 22
-    color "#999999"
     hover_color "#ffffff"
     font gui.text_font
