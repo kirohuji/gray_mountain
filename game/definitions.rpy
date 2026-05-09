@@ -8,6 +8,9 @@ image bg_apartment_kitchen_evening = Transform("images/bg/bg_apartment_kitchen_e
 image bg_apartment_bedroom_evening = Transform("images/bg/bg_apartment_bedroom_evening.png", fit="cover")
 image bg_apartment_balcony_evening = Transform("images/bg/bg_apartment_balcony_evening.png", fit="cover")
 
+## CG 插画
+image cg_elena_bedroom = Transform("images/cg/艾琳娜-卧室-cg.png", fit="cover")
+image cg_elena_bedroom2 = Transform("images/cg/艾琳娜-卧室2-cg.png", fit="cover")
 ## 角色定义
 define jim = Character("吉姆", kind = adv, ctc = "ctc")
 define elena = Character("艾琳娜", kind = adv, ctc = "ctc")

@@ -432,11 +432,19 @@ label sc03_phone_answer:
 
     $ state.increment_anomaly(1)
 
-    # 推进阶段
-    python:
-        quest.set_stage("ch01_bedroom_elena")
+    "你放下电话。那股窸窣声还在——很轻，但走廊的安静放大了它。你把电话听筒搁回托架上，金属碰塑料的声音很脆。"
 
-    jump explore_loop
+    $ nav.set_initial_room("livingroom")
+    scene expression nav.get_current_room()["background"]
+    with dissolve
+
+    "你穿过走廊，走进客厅。沙发上的凹痕还在，茶几上的药瓶没有动过。一切和你睡着之前一样。"
+
+    "客厅另一边——卧室的门虚掩着。门缝里透出床头的灯光。"
+
+    "你谨慎地推开门。门轴发出吱吱的响声。"
+
+    jump sc04_reunion
 
 
 # ---- Scene 04：重逢 ----
@@ -445,7 +453,7 @@ label sc04_reunion:
     hide screen room_explore
 
     $ nav.set_initial_room("bedroom")
-    scene expression nav.get_current_room()["background"]
+    scene cg_elena_bedroom
     with dissolve
 
     "艾琳娜坐在床边。"
@@ -476,6 +484,9 @@ label sc04_reunion:
 
     elena "医生说恢复得很好。你怎么了？你看起来像是见了鬼。"
 
+    scene cg_elena_bedroom2
+    with dissolve
+
     "你上前抱住了她。"
 
     "「我以为你……」"
@@ -500,6 +511,9 @@ label sc04_reunion:
 
     "这时的窗外，波士顿开始飘起了雪。"
 
+    scene black
+    pause 0.5
+
     "你看着那些雪花从黑暗中落下来，落在路灯的光晕里，像灰尘一样细小、一样安静。你忽然觉得整个世界都变得不真实了。"
 
     # 推进阶段
@@ -515,7 +529,7 @@ label sc05_doorbell:
     hide screen room_explore
 
     $ nav.set_initial_room("bedroom")
-    scene expression nav.get_current_room()["background"]
+    scene bg_apartment_bedroom_evening
     with dissolve
 
     "（叮——）"
