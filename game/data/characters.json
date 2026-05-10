@@ -1,0 +1,99 @@
+{
+    "characters": {
+        "tom": {
+            "id": "tom",
+            "display_name": "汤姆",
+            "full_name": "托马斯·温斯罗普·卡特",
+            "role": "protagonist",
+            "is_player_character": true,
+            "chapter_introduced": 0,
+            "status": "alive",
+            "can_appear_as_anomaly": false,
+            "description": "男主人公。风景画家。玩家视角——内心独白通过 narrator 呈现。"
+        },
+        "elena": {
+            "id": "elena",
+            "display_name": "艾琳娜",
+            "full_name": "艾琳娜·莫雷蒂·卡特",
+            "role": "core",
+            "is_player_character": false,
+            "chapter_introduced": 0,
+            "status": "dead",
+            "can_appear_as_anomaly": true,
+            "description": "汤姆的妻子。1931年死于灰山疗养院。故事的核心——她是被失去的，也是被追寻的。"
+        },
+        "jim": {
+            "id": "jim",
+            "display_name": "吉姆",
+            "full_name": "詹姆斯·霍顿",
+            "role": "ally",
+            "is_player_character": false,
+            "chapter_introduced": 1,
+            "status": "alive",
+            "can_appear_as_anomaly": false,
+            "description": "汤姆的至交。调查记者。现实世界的锚点——唯一坚持汤姆需要专业帮助的人。"
+        },
+        "west": {
+            "id": "west",
+            "display_name": "韦斯特医生",
+            "full_name": "亨利·韦斯特医生",
+            "role": "neutral",
+            "is_player_character": false,
+            "chapter_introduced": 2,
+            "status": "alive",
+            "can_appear_as_anomaly": false,
+            "description": "灰山疗养院院长。医学理性的代表。掌管着疗养院——也掌管着关于艾琳娜死亡的某些秘密。"
+        },
+        "harding": {
+            "id": "harding",
+            "display_name": "哈丁博士",
+            "full_name": "罗伯特·哈丁博士",
+            "role": "neutral",
+            "is_player_character": false,
+            "chapter_introduced": 1,
+            "status": "alive",
+            "can_appear_as_anomaly": false,
+            "description": "汤姆的心理医生。精神病学家。开药的人——也是理性对疯狂的审判者。"
+        },
+        "obrien": {
+            "id": "obrien",
+            "display_name": "奥布莱恩神父",
+            "full_name": "迈克尔·奥布莱恩神父",
+            "role": "ally",
+            "is_player_character": false,
+            "chapter_introduced": 2,
+            "status": "alive",
+            "can_appear_as_anomaly": false,
+            "description": "山中教堂的牧者。汤姆唯一可以说出真相的人——精神庇护者。"
+        },
+        "elisha": {
+            "id": "elisha",
+            "display_name": "伊莱沙·莫恩",
+            "full_name": "伊莱沙·莫恩",
+            "role": "mystery",
+            "is_player_character": false,
+            "chapter_introduced": 3,
+            "status": "dead",
+            "can_appear_as_anomaly": true,
+            "description": "灰山疗养院初代建立者。已故先驱者——通过遗留的文献和日记影响故事。"
+        }
+    },
+    "default_relationships": {
+        "tom": {
+            "elena": 100,
+            "jim": 80,
+            "west": 30,
+            "harding": 40,
+            "obrien": 50,
+            "elisha": 0
+        },
+        "jim": {
+            "tom": 85,
+            "elena": 60,
+            "west": 20,
+            "harding": 50,
+            "obrien": 30,
+            "elisha": 0
+        }
+    }
+}

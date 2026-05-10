@@ -1,16 +1,15 @@
 # ============================================================
 # 第一章：归途
-# 采用 NavigationManager + QuestManager + EventManager 架构
-# 探索模式 + 线性叙事场景
+# 引擎层由 exploration.rpy 提供（exploration_init / explore_loop / move_to_room / handle_activity / after_activity）
+# 本章仅包含：章节专属初始化 + 开场叙事 + 活动/场景叙事 labels
 # ============================================================
 
 label ch01_start:
-    # ---- 系统初始化 ----
+    # ---- 通用系统初始化 ----
+    call exploration_init
+
+    # ---- 章节特定初始化 ----
     python:
-        nav.load()
-        quest.load()
-        inv.load()
-        events.load()
         state.reset()
         nav.set_initial_room("foyer")
         quest.start_quest("ch01")
@@ -29,128 +28,16 @@ label ch01_start:
 
     "客厅的窗帘拉着。空气里有久未通风的沉闷——不是灰尘的气味，是封闭的空间自己产生的气味。旧木头。干涸的水垢。寂静。"
 
+    show jim_default with dissolve
+
     jim "药在茶几上——哈丁医生开的，每晚一片。"
     jim "我明天再来看你。"
+
+    hide jim_default with dissolve
 
     "门关上的声音。钥匙转动的声音。锁舌卡入锁扣的金属声——比他需要的更响。"
 
     "然后——完全地、彻底地——安静了。"
-
-    jump explore_loop
-
-
-# ============================================================
-# 主探索循环
-# ============================================================
-
-label explore_loop:
-    python:
-        # 检查是否应该触发叙事
-        narrative_jump = events.check_narrative_stage()
-        if narrative_jump:
-            renpy.jump(narrative_jump)
-
-    window hide
-
-    # 显示探索界面
-    show screen room_explore
-
-    python:
-        hint = quest.get_stage_hint()
-        last_hint = getattr(store, '_last_quest_hint', None)
-        if hint and hint != last_hint:
-            renpy.notify(hint)
-            store._last_quest_hint = hint
-
-    pause
-
-    hide screen room_explore
-    jump explore_loop
-
-
-# ============================================================
-# 房间移动处理
-# ============================================================
-
-label move_to_room:
-    # 先移除屏幕层（否则屏幕的背景图会覆盖 scene 的过渡）
-    hide screen room_explore
-
-    python:
-        dest = store._hovered_dest if hasattr(store, '_hovered_dest') and store._hovered_dest else "livingroom"
-        success, result = nav.move_to(dest)
-
-    if success:
-        scene expression nav.get_current_room()["background"]
-        with dissolve
-
-        python:
-            room_data = nav.get_current_room()
-            desc = nav.get_room_description()
-            if desc:
-                renpy.say(narrator, desc)
-
-            # 触发进入房间事件
-            events.check_enter_room(dest)
-            events.check_periodic()
-
-            # 检查任务推进
-            if quest.check_stage_completion():
-                quest.advance_stage()
-    else:
-        python:
-            renpy.say(narrator, result if isinstance(result, str) else "你无法去那里。")
-
-    jump explore_loop
-
-
-# ============================================================
-# 活动处理
-# ============================================================
-
-label handle_activity:
-    python:
-        act_id = store._hovered_activity if hasattr(store, '_hovered_activity') and store._hovered_activity else None
-        if not act_id:
-            renpy.jump("explore_loop")
-
-        # 从 activities.json 查找活动数据
-        all_acts = _load_activities_data()
-        activity = all_acts.get(act_id)
-
-        if not activity:
-            renpy.jump("explore_loop")
-
-        # 标记完成
-        state.mark_activity_completed(act_id)
-        state.mark_examined(act_id)
-        if activity.get("flag"):
-            state.set_flag(activity["flag"])
-
-        # 跳转到叙事 label
-        narrative_label = activity.get("narrative", {}).get("jump")
-        if narrative_label:
-            renpy.jump(narrative_label)
-
-        # 否则显示描述文本并返回
-        desc = activity.get("description", "")
-        if desc:
-            renpy.say(narrator, desc)
-
-        renpy.jump("after_activity")
-
-    jump explore_loop
-
-
-label after_activity:
-    python:
-        # 触发活动后事件
-        if hasattr(store, '_hovered_activity') and store._hovered_activity:
-            events.check_after_activity(store._hovered_activity)
-
-        # 检查任务推进
-        if quest.check_stage_completion():
-            quest.advance_stage()
 
     jump explore_loop
 
@@ -464,6 +351,10 @@ label sc04_reunion:
 
     "你的大脑在那一瞬间失去了所有语言的能力。"
 
+    python:
+        chars.set_status("elena", "anomaly_present")
+        state.increment_anomaly(1)
+
     "你用力地眨了一下眼睛。也许你还在做梦。也许那通电话根本没有响过。也许你从未从沙发上醒来。"
 
     "但艾琳娜还在那里。"
@@ -540,7 +431,11 @@ label sc05_doorbell:
 
     "艾琳娜没有动，只是站在窗边看着你。"
 
+    # show elena_default with dissolve
+
     elena "有人找你，你是邀请了客人了？"
+
+    # hide elena_default with dissolve
 
     "「我记得应该……没有……你等我一下。」"
 
@@ -551,6 +446,8 @@ label sc05_doorbell:
     with dissolve
 
     "门外站着吉姆，呼吸有些急促。"
+
+    show jim_default at center with dissolve
 
     jim "谢天谢地，你终于开门了。"
 
@@ -565,6 +462,8 @@ label sc05_doorbell:
     "你忍不住回过头——公寓的门还开着一道缝。"
 
     jim "你现在状态很差。哈丁医生已经等了你一下午了。"
+
+    hide jim_default with dissolve
 
     scene black
     with Dissolve(2.0)
@@ -585,6 +484,8 @@ label sc05_doorbell:
     python:
         state.set_flag("ch01_complete")
         meta.increment_playthrough()
+        chars.adjust_relationship("tom", "jim", 5)
+        chars.adjust_relationship("jim", "tom", 5)
 
     centered "第一章 归途 · 完"
 
