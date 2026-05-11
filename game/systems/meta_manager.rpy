@@ -5,7 +5,7 @@
 
 init python:
     class MetaManager:
-        """元进度管理器 — 管理跨周目数据"""
+        # 元进度管理器 — 管理跨周目数据
 
         def __init__(self):
             # persistent 字段在第一次访问时自动初始化
@@ -15,7 +15,7 @@ init python:
 
         @property
         def playthrough(self):
-            """当前是第几周目（首次为 1）"""
+            # 当前是第几周目（首次为 1）
             if not hasattr(persistent, "_meta_playthrough"):
                 persistent._meta_playthrough = 1
             return persistent._meta_playthrough
@@ -34,7 +34,7 @@ init python:
 
         @property
         def cleared_endings(self):
-            """已解锁的结局 ID 集合"""
+            # 已解锁的结局 ID 集合
             if not hasattr(persistent, "_meta_cleared_endings"):
                 persistent._meta_cleared_endings = set()
             return persistent._meta_cleared_endings
@@ -50,7 +50,7 @@ init python:
 
         @property
         def unlocked_content(self):
-            """已解锁的隐藏内容标志集合"""
+            # 已解锁的隐藏内容标志集合
             if not hasattr(persistent, "_meta_unlocked"):
                 persistent._meta_unlocked = set()
             return persistent._meta_unlocked
@@ -65,7 +65,7 @@ init python:
 
         @property
         def truth_unlocked(self):
-            """真结局条件：是否已解锁真相"""
+            # 真结局条件：是否已解锁真相
             if not hasattr(persistent, "_meta_truth_unlocked"):
                 persistent._meta_truth_unlocked = False
             return persistent._meta_truth_unlocked
@@ -76,7 +76,7 @@ init python:
         # ---- 重置（调试用） ----
 
         def reset_all(self):
-            """重置所有跨周目数据"""
+            # 重置所有跨周目数据
             persistent._meta_playthrough = 1
             persistent._meta_cleared_endings = set()
             persistent._meta_unlocked = set()

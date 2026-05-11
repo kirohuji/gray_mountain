@@ -8,7 +8,7 @@ init python:
     import json
 
     class QuestManager:
-        """任务阶段管理器"""
+        # 任务阶段管理器
 
         def __init__(self):
             self.quests = {}
@@ -16,7 +16,7 @@ init python:
             self._loaded = False
 
         def load(self):
-            """从 quests.json 加载任务数据"""
+            # 从 quests.json 加载任务数据
             if self._loaded:
                 return
 
@@ -41,7 +41,7 @@ init python:
         # ---- 任务操作 ----
 
         def start_quest(self, quest_id):
-            """开始一个任务"""
+            # 开始一个任务
             if quest_id not in self.quests:
                 return False
 
@@ -53,7 +53,7 @@ init python:
             return True
 
         def set_stage(self, stage_id):
-            """设置当前阶段"""
+            # 设置当前阶段
             quest = self.get_current_quest_data()
             if not quest:
                 return False
@@ -71,27 +71,27 @@ init python:
             return True
 
         def get_current_stage(self):
-            """获取当前阶段数据"""
+            # 获取当前阶段数据
             quest = self.get_current_quest_data()
             if not quest or not self.current_stage:
                 return None
             return quest.get("stages", {}).get(self.current_stage, None)
 
         def get_current_quest_data(self):
-            """获取当前任务数据"""
+            # 获取当前任务数据
             if not self.current_quest:
                 return None
             return self.quests.get(self.current_quest, None)
 
         def get_stage_description(self):
-            """获取当前阶段描述（用于UI提示）"""
+            # 获取当前阶段描述（用于UI提示）
             stage = self.get_current_stage()
             if not stage:
                 return ""
             return stage.get("description", "")
 
         def get_stage_hint(self):
-            """获取当前阶段提示"""
+            # 获取当前阶段提示
             stage = self.get_current_stage()
             if not stage:
                 return ""
@@ -100,7 +100,7 @@ init python:
         # ---- 完成检查 ----
 
         def check_stage_completion(self):
-            """检查当前阶段是否完成"""
+            # 检查当前阶段是否完成
             stage = self.get_current_stage()
             if not stage:
                 return False
@@ -127,7 +127,7 @@ init python:
             return False
 
         def advance_stage(self):
-            """推进到下一阶段"""
+            # 推进到下一阶段
             stage = self.get_current_stage()
             if not stage:
                 return None
@@ -139,7 +139,7 @@ init python:
             return None
 
         def is_narrative_stage(self):
-            """当前阶段是否应该触发叙事（非探索）"""
+            # 当前阶段是否应该触发叙事（非探索）
             stage = self.get_current_stage()
             if not stage:
                 return False

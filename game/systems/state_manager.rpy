@@ -6,7 +6,7 @@
 
 init python:
     class StateManager:
-        """游戏状态管理器 — 薄封装 store._save"""
+        # 游戏状态管理器 — 薄封装 store._save
 
         # ---- 内部辅助 ----
 

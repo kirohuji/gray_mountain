@@ -5,7 +5,7 @@
 
 init python:
     class TimeManager:
-        """时间管理系统"""
+        # 时间管理系统
 
         TIME_SLOTS = ["evening", "night", "late_night", "dawn"]
         TIME_SLOT_LABELS = {
@@ -19,7 +19,7 @@ init python:
             self.current_index = 0
 
         def init_from_state(self):
-            """从 StateManager 同步当前时间"""
+            # 从 StateManager 同步当前时间
             current = store.state.get_time()
             if current in self.TIME_SLOTS:
                 self.current_index = self.TIME_SLOTS.index(current)
@@ -27,7 +27,7 @@ init python:
                 self.current_index = 0
 
         def advance(self):
-            """推进到下一个时间槽"""
+            # 推进到下一个时间槽
             if self.current_index < len(self.TIME_SLOTS) - 1:
                 self.current_index += 1
                 new_time = self.TIME_SLOTS[self.current_index]
@@ -36,7 +36,7 @@ init python:
             return None
 
         def set_time(self, time_slot):
-            """强制设置时间槽"""
+            # 强制设置时间槽
             if time_slot in self.TIME_SLOTS:
                 self.current_index = self.TIME_SLOTS.index(time_slot)
                 store.state.set_time(time_slot)
@@ -51,13 +51,13 @@ init python:
             return self.TIME_SLOT_LABELS.get(ts, ts)
 
         def is_past(self, time_slot):
-            """检查是否已经过了某个时间槽"""
+            # 检查是否已经过了某个时间槽
             if time_slot not in self.TIME_SLOTS:
                 return False
             return self.TIME_SLOTS.index(time_slot) <= self.current_index
 
         def get_transition_description(self, old_time, new_time):
-            """获取时间变化的叙事文本"""
+            # 获取时间变化的叙事文本
             descriptions = {
                 ("evening", "night"): "夜幕完全落下了。",
                 ("night", "late_night"): "夜更深了。街灯的光变得稀薄，黑暗似乎有了重量。",
