@@ -7,13 +7,22 @@
 init python:
     import json
 
+<<<<<<< HEAD
     class NavigationManager:    
+=======
+    class NavigationManager:
+        # 房间导航管理器
+>>>>>>> 4024f8e7961ca01a4e1b2b19432705dbfc555d15
 
         def __init__(self):
             self.rooms = {}
             self._loaded = False
 
         def load(self):
+<<<<<<< HEAD
+=======
+            # 从 rooms.json 加载房间数据
+>>>>>>> 4024f8e7961ca01a4e1b2b19432705dbfc555d15
             if self._loaded:
                 return
 
@@ -38,11 +47,19 @@ init python:
         # ---- 房间查询 ----
 
         def get_current_room(self):
+<<<<<<< HEAD
+=======
+            # 获取当前房间数据
+>>>>>>> 4024f8e7961ca01a4e1b2b19432705dbfc555d15
             if self.current_room and self.current_room in self.rooms:
                 return self.rooms[self.current_room]
             return None
 
         def get_room(self, room_id):
+<<<<<<< HEAD
+=======
+            # 获取指定房间数据
+>>>>>>> 4024f8e7961ca01a4e1b2b19432705dbfc555d15
             return self.rooms.get(room_id, None)
 
         # ---- 移动 ----
