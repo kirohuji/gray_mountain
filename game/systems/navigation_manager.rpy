@@ -7,15 +7,13 @@
 init python:
     import json
 
-    class NavigationManager:
-        """房间导航管理器"""
+    class NavigationManager:    
 
         def __init__(self):
             self.rooms = {}
             self._loaded = False
 
         def load(self):
-            """从 rooms.json 加载房间数据"""
             if self._loaded:
                 return
 
@@ -40,19 +38,16 @@ init python:
         # ---- 房间查询 ----
 
         def get_current_room(self):
-            """获取当前房间数据"""
             if self.current_room and self.current_room in self.rooms:
                 return self.rooms[self.current_room]
             return None
 
         def get_room(self, room_id):
-            """获取指定房间数据"""
             return self.rooms.get(room_id, None)
 
         # ---- 移动 ----
 
         def move_to(self, room_id):
-            """移动到指定房间"""
             if room_id not in self.rooms:
                 return False, "房间不存在"
 
@@ -69,7 +64,6 @@ init python:
             return True, room
 
         def can_move_to(self, room_id):
-            """检查是否可以移动到指定房间"""
             if room_id not in self.rooms:
                 return False
             if self.current_room is None:
@@ -80,14 +74,12 @@ init python:
             return True
 
         def set_initial_room(self, room_id):
-            """设置初始房间（绕过连接检查）"""
             if room_id in self.rooms:
                 self.current_room = room_id
                 return True
             return False
 
         def get_connections(self):
-            """获取当前房间可移动到的目标"""
             current = self.get_current_room()
             if current:
                 return current.get("connections", [])
@@ -96,7 +88,6 @@ init python:
         # ---- 描述 ----
 
         def get_room_description(self, room_id=None):
-            """获取房间描述（支持时间变体）"""
             rid = room_id or self.current_room
             room = self.rooms.get(rid)
             if not room:
@@ -110,7 +101,6 @@ init python:
             return room.get("default_description", "")
 
         def get_room_atmosphere(self, room_id=None):
-            """获取房间氛围文本"""
             rid = room_id or self.current_room
             room = self.rooms.get(rid)
             if not room:

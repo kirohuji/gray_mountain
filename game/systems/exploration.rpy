@@ -20,7 +20,6 @@
 # ============================================================
 
 label exploration_init:
-    """通用系统初始化 —— 加载所有管理器数据"""
     python:
         nav.load()
         quest.load()
@@ -31,7 +30,6 @@ label exploration_init:
 
 
 label explore_loop:
-    """主探索循环 —— 检查叙事触发、显示探索界面、等待玩家操作"""
     python:
         narrative_jump = events.check_narrative_stage()
         if narrative_jump:
@@ -53,7 +51,6 @@ label explore_loop:
 
 
 label move_to_room:
-    """房间移动处理 —— 导航切换、场景过渡、事件触发"""
     hide screen room_explore
 
     python:
@@ -82,7 +79,6 @@ label move_to_room:
 
 
 label handle_activity:
-    """互动处理 —— 解析活动数据、标记完成、跳转叙事或显示描述"""
     python:
         act_id = store._hovered_activity if hasattr(store, '_hovered_activity') and store._hovered_activity else None
         if not act_id:
@@ -113,7 +109,6 @@ label handle_activity:
 
 
 label after_activity:
-    """互动后处理 —— 触发活动后事件、推进任务阶段"""
     python:
         if hasattr(store, '_hovered_activity') and store._hovered_activity:
             events.check_after_activity(store._hovered_activity)
