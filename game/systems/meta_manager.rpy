@@ -5,10 +5,6 @@
 
 init python:
     class MetaManager:
-<<<<<<< HEAD
-=======
-        # 元进度管理器 — 管理跨周目数据
->>>>>>> 4024f8e7961ca01a4e1b2b19432705dbfc555d15
 
         def __init__(self):
             # persistent 字段在第一次访问时自动初始化
@@ -18,10 +14,6 @@ init python:
 
         @property
         def playthrough(self):
-<<<<<<< HEAD
-=======
-            # 当前是第几周目（首次为 1）
->>>>>>> 4024f8e7961ca01a4e1b2b19432705dbfc555d15
             if not hasattr(persistent, "_meta_playthrough"):
                 persistent._meta_playthrough = 1
             return persistent._meta_playthrough

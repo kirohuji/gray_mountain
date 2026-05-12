@@ -65,6 +65,7 @@
             "name": "卧室",
             "background": "bg_apartment_bedroom_evening",
             "connections": ["livingroom", "balcony"],
+            "required_stage": "ch01_bedroom_elena",
             "time_descriptions": {
                 "evening": "卧室的窗帘半开着。窗外是波士顿灰蓝色的傍晚天空。床铺得整整齐齐——她不在的时候一直是这样。床头柜上摊着速写本，翻到某一页。阳台的玻璃门透进最后的天光。",
                 "night": "卧室被窗外的街灯照亮，光线从百叶窗的缝隙切进来，在地板上画出一排平行的灰色线条。床头柜上，速写本摊开着，纸页微微翘起。",

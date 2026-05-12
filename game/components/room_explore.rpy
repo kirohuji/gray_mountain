@@ -21,11 +21,16 @@ init python:
     def get_available_activities(room_id):
         all_activities = _load_activities_data()
         available = []
+        current_stage = store.quest.current_stage
         for act_id, act in all_activities.items():
             if act.get("room") != room_id:
                 continue
             # 一次性活动检查
             if act.get("once") and store.state.is_activity_completed(act_id):
+                continue
+            # 阶段条件检查
+            required_stage = act.get("required_stage")
+            if required_stage and current_stage != required_stage:
                 continue
             available.append(act)
         return available

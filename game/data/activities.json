@@ -91,6 +91,7 @@
             "type": "action",
             "once": true,
             "flag": "answered_phone",
+            "required_stage": "ch01_phone_answered",
             "description": "电话还在响。你拿起听筒。",
             "narrative": {
                 "jump": "sc03_phone_answer"

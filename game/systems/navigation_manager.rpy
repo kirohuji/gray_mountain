@@ -7,22 +7,13 @@
 init python:
     import json
 
-<<<<<<< HEAD
     class NavigationManager:    
-=======
-    class NavigationManager:
-        # 房间导航管理器
->>>>>>> 4024f8e7961ca01a4e1b2b19432705dbfc555d15
 
         def __init__(self):
             self.rooms = {}
             self._loaded = False
 
         def load(self):
-<<<<<<< HEAD
-=======
-            # 从 rooms.json 加载房间数据
->>>>>>> 4024f8e7961ca01a4e1b2b19432705dbfc555d15
             if self._loaded:
                 return
 
@@ -47,19 +38,11 @@ init python:
         # ---- 房间查询 ----
 
         def get_current_room(self):
-<<<<<<< HEAD
-=======
-            # 获取当前房间数据
->>>>>>> 4024f8e7961ca01a4e1b2b19432705dbfc555d15
             if self.current_room and self.current_room in self.rooms:
                 return self.rooms[self.current_room]
             return None
 
         def get_room(self, room_id):
-<<<<<<< HEAD
-=======
-            # 获取指定房间数据
->>>>>>> 4024f8e7961ca01a4e1b2b19432705dbfc555d15
             return self.rooms.get(room_id, None)
 
         # ---- 移动 ----
@@ -76,6 +59,13 @@ init python:
                 current = self.get_current_room()
                 if current and room_id not in current.get("connections", []):
                     return False, "无法从这里去那里"
+
+            # 阶段条件检查
+            required_stage = room.get("required_stage")
+            if required_stage:
+                current_stage = store.quest.current_stage
+                if current_stage != required_stage:
+                    return False, "现在还无法进入这个房间"
 
             self.current_room = room_id
             return True, room
