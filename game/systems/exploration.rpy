@@ -58,7 +58,7 @@ label move_to_room:
         success, result = nav.move_to(dest)
 
     if success:
-        scene expression nav.get_current_room()["background"]
+        scene expression nav.get_current_room()["background"] at blur_bg
         with dissolve
 
         python:

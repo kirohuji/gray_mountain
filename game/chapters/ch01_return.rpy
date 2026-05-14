@@ -19,7 +19,7 @@ label ch01_start:
     centered "第一章：归途"
 
     # ---- 开场叙事：吉姆送汤姆回家 ----
-    scene bg_apartment_foyer_evening at horror_photo_bg
+    scene bg_apartment_foyer_evening at blur_bg
     with dissolve
 
     "哈里斯大道的公寓和你离开时一模一样。窄长的棕色石砖公寓——波士顿最常见的那种——门廊窄，天花板却意外地高。"
@@ -49,7 +49,7 @@ label ch01_start:
 # ---- 玄关 ----
 
 label act_examine_bag:
-    scene expression nav.get_current_room()["background"]
+    scene expression nav.get_current_room()["background"] at blur_bg
     with dissolve
 
     "深灰色的帆布袋靠在鞋柜侧面。不是你平时出门用的那一只——这是疗养院的物品，侧面贴着一张白色标签，上面用墨水写着你的名字：{i}卡特，汤姆。{/i}"
@@ -69,7 +69,7 @@ label act_examine_bag:
 
 
 label act_examine_phone:
-    scene expression nav.get_current_room()["background"]
+    scene expression nav.get_current_room()["background"] at blur_bg
     with dissolve
 
     $ show_image_card("images/cg/box1.png")
@@ -100,7 +100,7 @@ label act_examine_phone:
 
 
 label act_examine_shoes:
-    scene expression nav.get_current_room()["background"]
+    scene expression nav.get_current_room()["background"] at blur_bg
     with dissolve
 
     "老旧的橡木鞋柜。你蹲下来打开柜门——你的鞋整齐地排列在底层。皮鞋，帆布鞋，一双你冬天穿的厚靴子。"
@@ -119,7 +119,7 @@ label act_examine_shoes:
 
 
 label act_examine_mirror:
-    scene expression nav.get_current_room()["background"]
+    scene expression nav.get_current_room()["background"] at blur_bg
     with dissolve
 
     "你无意中瞥了一眼门边的穿衣镜。"
@@ -142,7 +142,7 @@ label act_examine_mirror:
 # ---- 客厅 ----
 
 label act_examine_medicine:
-    scene expression nav.get_current_room()["background"]
+    scene expression nav.get_current_room()["background"] at blur_bg
     with dissolve
 
     "茶几上的白色小药瓶。标签上写着：{i}卡特，汤姆。每晚一片，睡前服用。哈丁医生。{/i}"
@@ -160,7 +160,7 @@ label act_examine_medicine:
 # ---- 走廊 ----
 
 label act_examine_corridor_sketch:
-    scene expression nav.get_current_room()["background"]
+    scene expression nav.get_current_room()["background"] at blur_bg
     with dissolve
 
     "墙上的炭笔素描——艾琳娜画的。画的是五渔村的悬崖和小巷，层层叠叠的房屋像挂在崖壁上。左下角有她的签名，日期是三年前。"
@@ -173,7 +173,7 @@ label act_examine_corridor_sketch:
 # ---- 卧室 ----
 
 label act_examine_sketchbook:
-    scene expression nav.get_current_room()["background"]
+    scene expression nav.get_current_room()["background"] at blur_bg
     with dissolve
 
     "床头柜上摊开的那本速写本。翻到的那一页是五渔村的速写——同样的悬崖和小巷，但比墙上那幅更早。纸面泛黄了，炭笔线条模糊得像褪色的梦。"
@@ -191,7 +191,7 @@ label act_examine_sketchbook:
 # ---- 画室 ----
 
 label act_examine_easel:
-    scene expression nav.get_current_room()["background"]
+    scene expression nav.get_current_room()["background"] at blur_bg
     with dissolve
 
     "画架立在窗边。画布上一片空白。"
@@ -202,7 +202,7 @@ label act_examine_easel:
 
 
 label act_examine_paints:
-    scene expression nav.get_current_room()["background"]
+    scene expression nav.get_current_room()["background"] at blur_bg
     with dissolve
 
     "颜料管整齐地排列在桌上。有些变硬了——盖子没拧紧。在那些变硬的颜料管旁边，有一管灰色的颜料是新的，盖子拧得很紧。"
@@ -217,7 +217,7 @@ label act_examine_paints:
 # ---- 卧室 ----
 
 label act_look_out_window:
-    scene expression nav.get_current_room()["background"]
+    scene expression nav.get_current_room()["background"] at blur_bg
     with dissolve
 
     "窗外是波士顿的夜。路灯下——细小的白色的东西开始飘落。"
@@ -239,7 +239,7 @@ label sc02_sleep:
     hide screen room_explore
 
     $ nav.move_to("livingroom")
-    scene expression nav.get_current_room()["background"]
+    scene expression nav.get_current_room()["background"] at blur_bg
     with dissolve
 
     "你坐到沙发上。沙发微微陷了下去。"
@@ -272,7 +272,7 @@ label sc03_phone_rings:
     "（电话突然响了起来。空荡的公寓被震得格外刺耳。）"
 
     $ nav.set_initial_room("livingroom")
-    scene expression nav.get_current_room()["background"]
+    scene expression nav.get_current_room()["background"] at blur_bg
     with Dissolve(1.0)
 
     "你按了按额头，缓慢地站起身。长时间的疲惫让你的视线微微发黑，后背也泛着一阵迟钝的酸痛。"
@@ -282,7 +282,7 @@ label sc03_phone_rings:
     "你拖着脚步穿过昏暗的走廊，来到墙边的电话机前。"
 
     $ nav.set_initial_room("corridor")
-    scene expression nav.get_current_room()["background"]
+    scene expression nav.get_current_room()["background"] at blur_bg
     with dissolve
 
     # 推进阶段：等待玩家接电话
@@ -296,7 +296,7 @@ label sc03_phone_answer:
     hide screen room_explore
 
     $ nav.set_initial_room("corridor")
-    scene expression nav.get_current_room()["background"]
+    scene expression nav.get_current_room()["background"] at blur_bg
     with dissolve
 
     "你拿起听筒。"
@@ -322,7 +322,7 @@ label sc03_phone_answer:
     "你放下电话。那股窸窣声还在——很轻，但走廊的安静放大了它。你把电话听筒搁回托架上，金属碰塑料的声音很脆。"
 
     $ nav.set_initial_room("livingroom")
-    scene expression nav.get_current_room()["background"]
+    scene expression nav.get_current_room()["background"] at blur_bg
     with dissolve
 
     "你穿过走廊，走进客厅。沙发上的凹痕还在，茶几上的药瓶没有动过。一切和你睡着之前一样。"
@@ -420,7 +420,7 @@ label sc05_doorbell:
     hide screen room_explore
 
     $ nav.set_initial_room("bedroom")
-    scene bg_apartment_bedroom_evening
+    scene bg_apartment_bedroom_evening at blur_bg
     with dissolve
 
     "（叮——）"
@@ -442,7 +442,7 @@ label sc05_doorbell:
     "你离开卧室，走到玄关，打开门。"
 
     $ nav.set_initial_room("foyer")
-    scene expression nav.get_current_room()["background"]
+    scene expression nav.get_current_room()["background"] at blur_bg
     with dissolve
 
     "门外站着吉姆，呼吸有些急促。"
