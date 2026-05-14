@@ -1,3 +1,20 @@
+# 灰暗压抑色调（适合恐怖氛围）
+transform dark_mood:
+    matrixcolor SaturationMatrix(0.3)          # 降低饱和度
+    matrixcolor BrightnessMatrix(-0.15)         # 降低亮度
+    matrixcolor ContrastMatrix(1.3)             # 提高对比度
+
+# 褪色回忆效果（老照片风格）
+transform sepia_memory:
+    matrixcolor SepiaMatrix()
+    blur 2.0
+
+# 冷色调（灰山主题）
+transform cold_tone:
+    matrixcolor TintMatrix("#1a2a3a")           # 蓝灰冷色覆盖
+transform blur_bg:
+    blur 8.0    # 重度模糊（梦境/幻觉）
+
 ## 图像定义
 image bg_apartment_foyer_evening = Transform("images/bg/bg_apartment_foyer_evening.jpg", fit="cover")
 image bg_apartment_corridor_evening = Transform("images/bg/bg_apartment_corridor_evening.jpg", fit="cover")
