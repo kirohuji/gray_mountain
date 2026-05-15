@@ -19,7 +19,7 @@ label ch01_start:
     centered "第一章：归途"
 
     # ---- 开场叙事：吉姆送汤姆回家 ----
-    scene bg_apartment_foyer_evening at horror_photo_bg
+    scene bg_apartment_foyer_evening
     with dissolve
 
     "哈里斯大道的公寓和你离开时一模一样。窄长的棕色石砖公寓——波士顿最常见的那种——门廊窄，天花板却意外地高。"

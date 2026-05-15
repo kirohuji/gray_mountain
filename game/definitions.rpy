@@ -13,7 +13,7 @@ transform sepia_memory:
 transform cold_tone:
     matrixcolor TintMatrix("#1a2a3a")           # 蓝灰冷色覆盖
 transform blur_bg:
-    blur 8.0    # 重度模糊（梦境/幻觉）
+    blur 4.0    # 重度模糊（梦境/幻觉）
 
 ## 图像定义
 image bg_apartment_foyer_evening = Transform("images/bg/bg_apartment_foyer_evening.jpg", fit="cover")
